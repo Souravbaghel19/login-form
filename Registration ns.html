@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			padding-left: 10%;
+			padding-right: 10%;
+			font-family: lightblue;
+			font-size: 15px;
+			 background:linear-gradient(90deg,lightblue,pink);
+}
+.formContainer {
+	background-color:linear-gradient(125deg,lightblue,green);
+	 display: flex; 
+	 border: 1px solid #555555;
+	 padding: 30px; 
+	 flex-direction: column;
+	 }
+	 .formFields{
+	 	display: flex;
+	 	/*border: 1px dashed black; */
+	 	padding: 5px;
+	 	align-items: center;
+	 	/*padding-right: 30%;*/
+	 }
+	 .inputBoxes {
+	 	/*margin-left: 20px; */ 
+	 	padding: 5px;
+	 	flex: 5;
+	    /*border: 1px dashed black;*/
+	 }
+	 .formLabels{
+	 	flex: 3;
+        padding: 5px;
+	 	/* border: 1px dashed black;*/
+	 }
+	 .moveToRight{
+           justify-content: flex-end;
+	 }
+	 .niceButton{
+	 	color: White;
+	 	background:#4d4d4d;
+	 	padding: 7px 27px; 
+     }
+        .click{
+            color: White;
+        background:green;
+        padding: 7px 27px
+        }
+	 }
+	 .niceButton:hover{
+            background: white;
+            color: #4d4d4d; 
+            cursor: progress;
+        }
+        .captch{
+            justify-content:end;
+            padding-right: 30px;
+        }
+        .flow{
+        text-align:center;
+            padding: 5px;
+        }
+	</style>
+</head>
+<body>   
+    <h1 class="flow">Login Form</h1>
+    <div style="display: none;"></div>
+    <div class="outerBox"> </div>
+    <div class="formContainer">
+    <h4>Personal Details</h4>	
+    <form>
+    	<div class="formFields">
+                <div style="flex:2"></div>
+                       <label class="formLabels">First Name :</label>
+                       <input type="text" placeholder="first Name"autofocus=" " class="inputBoxes" >
+    	        </div>
+    	<div class="formFields">
+                <div style="flex:2"></div>
+                      <label class="formLabels"> Middle Name :</label>
+                      <input type="text" placeholder="Middle Name" class="inputBoxes" >
+                </div>
+    	<div class="formFields">
+                <div style="flex:2"></div>
+                      <label class="formLabels"> Last Name : </label>
+                      <input type="text" placeholder="Last Name" class="inputBoxes" >
+                </div>
+    	<div class="formFields">
+    		    <div style="flex:2"></div>
+    		          <label class="formLabels"> father Name :</label>
+    		          <input type="text" placeholder="father Name" class="inputBoxes" >
+    	        </div>
+        <div class="formFields">
+    	    	<div style="flex:2"></div>
+    		          <label class="formLabels">Mother Name :</label>
+    		          <input type="text" placeholder="Mother Name" class="inputBoxes" >
+    	        </div>
+    	<div class="formFields">
+    		    <div style="flex:2"></div>
+    		          <label class="formLabels">DOB:</label>
+    		          <input type="Date" placeholder="Date of Birth" class="inputBoxes" >
+    	        </div>
+                <h4>Others Details</h4>
+    	<div class="formFields">
+    		<div style="flex:2"></div>
+                   <label class="formLabels"> Aadhaar No. :</label>
+                    <input type="telephone" placeholder="Aadhaar No." name="phone" pattern="(0/91)?[7-9][0-9]{9}" required>
+                    <div style="flex:2"></div>
+                           <label class="formLabels">Gender :</label>
+                                <input type="radio" name="radio">
+                           <label>Male<label></label>
+                                <input type="radio" name="radio">
+                           <label>female</label>
+                                <input type="radio" name="radio">
+                           <label>Transgender</label>
+               </div>
+    	    <div class="formFields">
+    	    <div style="flex:2"></div>
+    		<label class="formLabels">Marital Status: </label>
+                            <select>
+                                   <option selected="selected" value="">Select Marital Status</option>
+                                   <option value="M">Married</option>
+                                   <option value="S">Single</option>
+                                   <option value="D">Divorced</option>
+                            </select>
+                            <div style="flex:2"></div>
+                    <label class="formLabels"> Phone No. :</label>
+                    <input type="telephone" placeholder="Phone No." name="phone" pattern="(0/91)?[7-9][0-9]{9}" required>
+        </div>
+        <div class="formFields">
+                <div style="flex:2"></div>
+            <label class="formLabels">category :</label>
+            <select>
+                <option selected="selected" value="">--select caste--</option>
+    <option value="G">General</option>
+    <option value="SC">Scheduled Caste</option>
+    <option value="ST">Scheduled Tribe</option>
+    <option value="OBCNCL">Other Backward Classes(Non-Creamy Layer)</option>
+    <option value="EWS">Economically Weaker Section</option>
+            </select>
+            <label class="formLabels">
+            Religion :
+            </label>
+            <select>
+            <option selected="selected" value="">Select Religion</option>
+    <option value="Hindu">Hindu</option>
+    <option value="Muslim">Muslim / Islam</option>
+    <option value="Sikh">Sikh</option>
+    <option value="Christian">Christian</option>
+    <option value="Buddhist">Buddhist</option>
+    <option value="Jain">Jain</option>
+    <option value="Jew">Jew</option>
+    <option value="Other">Other</option>
+</select>
+        </div>
+    	<div class="formFields">
+    		<div style="flex:2">
+                </div>
+    		<label class="formLabels">
+            Password :
+            </label>
+            <input type="password" placeholder="password" class="inputBoxes" >
+            <label class="formLabels">
+            Confirm Password :
+            </label>
+            <input type="text" placeholder="confirm password" class="inputBoxes" >
+    	</div>
+    	<div class="formFields">
+    		<div style="flex:2">
+                </div>
+    		<label class="formLabels">
+    		 E-mail :
+    		</label>
+    		<input type="text" placeholder="Email" class="inputBoxes" >
+            <label class="formLabels">
+            confirm E-mail :
+            </label>
+            <input type="text" placeholder="Email" class="inputBoxes" >
+    	</div>
+        <h4>Permanent Address</h4>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             Address :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+            <label class="formLabels">
+              Landmark:
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+            <label class="formLabels">
+             city/town/village :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+        </div>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             District :
+            </label>
+            <input type="District" placeholder="" class="inputBoxes" >
+            <label class="formLabels">
+             State:
+            </label>
+            <select><option selected="selected" value="">--select--</option>
+    <option value="1">Andaman and Nicobar Islands</option>
+    <option value="2">Andhra Pradesh</option>
+    <option value="3">Arunachal Pradesh</option>
+    <option value="4">Assam</option>
+    <option value="5">Bihar</option>
+    <option value="6">Chandigarh</option>
+    <option value="7">Chhattisgarh</option>
+    <option value="8">Dadra and Nagar Haveli</option>
+    <option value="9">Daman and Diu</option>
+    <option value="10">Delhi</option>
+    <option value="11">Goa</option>
+    <option value="12">Gujarat</option>
+    <option value="13">Haryana</option>
+    <option value="14">Himachal Pradesh</option>
+    <option value="15">Jammu and Kashmir</option>
+    <option value="16">Jharkhand</option>
+    <option value="17">Karnataka</option>
+    <option value="18">Kerala</option>
+    <option value="19">Lakshadweep</option>
+    <option value="20">Madhya Pradesh</option>
+    <option value="21">Maharashtra</option>
+    <option value="22">Manipur</option>
+    <option value="23">Meghalaya</option>
+    <option value="24">Mizoram</option>
+    <option value="25">Nagaland</option>
+    <option value="26">Odisha</option>
+    <option value="27">Puducherry</option>
+    <option value="28">Punjab</option>
+    <option value="29">Rajasthan</option>
+    <option value="30">Sikkim</option>
+    <option value="31">Tamil Nadu</option>
+    <option value="32">Telangana</option>
+    <option value="33">Tripura</option>
+    <option value="34">Uttar Pradesh</option>
+    <option value="35">Uttarakhand</option>
+    <option value="36">West Bengal</option>
+</select>
+            <label class="formLabels">
+             Country:
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+        </div>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             Pin Code:
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+            <label class="formLabels">
+             STD code with Telephone(optional) :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+        </div>
+        <h4>Correspondance Address</h4>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+              <p>Correspondance Address same as permanent Address</p>
+            </label>
+           <input type="radio" name="radio">
+                           <label>Yes<label></label>
+                                <input type="radio" name="radio">
+                           <label>No</label>
+        </div>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             Address :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+            <label class="formLabels">
+             Landmark :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" ><label class="formLabels">
+             city/town/village :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+        </div>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             District :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+            <label class="formLabels">
+             State :
+            </label>
+            <select>
+                <option selected="selected" value="">--select--</option>
+    <option value="1">Andaman and Nicobar Islands</option>
+    <option value="2">Andhra Pradesh</option>
+    <option value="3">Arunachal Pradesh</option>
+    <option value="4">Assam</option>
+    <option value="5">Bihar</option>
+    <option value="6">Chandigarh</option>
+    <option value="7">Chhattisgarh</option>
+    <option value="8">Dadra and Nagar Haveli</option>
+    <option value="9">Daman and Diu</option>
+    <option value="10">Delhi</option>
+    <option value="11">Goa</option>
+    <option value="12">Gujarat</option>
+    <option value="13">Haryana</option>
+    <option value="14">Himachal Pradesh</option>
+    <option value="15">Jammu and Kashmir</option>
+    <option value="16">Jharkhand</option>
+    <option value="17">Karnataka</option>
+    <option value="18">Kerala</option>
+    <option value="19">Lakshadweep</option>
+    <option value="20">Madhya Pradesh</option>
+    <option value="21">Maharashtra</option>
+    <option value="22">Manipur</option>
+    <option value="23">Meghalaya</option>
+    <option value="24">Mizoram</option>
+    <option value="25">Nagaland</option>
+    <option value="26">Odisha</option>
+    <option value="27">Puducherry</option>
+    <option value="28">Punjab</option>
+    <option value="29">Rajasthan</option>
+    <option value="30">Sikkim</option>
+    <option value="31">Tamil Nadu</option>
+    <option value="32">Telangana</option>
+    <option value="33">Tripura</option>
+    <option value="34">Uttar Pradesh</option>
+    <option value="35">Uttarakhand</option>
+    <option value="36">West Bengal</option>
+
+</select>
+            </select>
+            <label class="formLabels">
+             Country :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+        </div>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             Pin Code :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+            <label class="formLabels">
+             STD code with Telephone(optional) :
+            </label>
+            <input type="text" placeholder="" class="inputBoxes" >
+        </div>
+        <h4>Security Pin</h4>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             Password Remark :
+            </label>
+            <input type="password" placeholder="Remark password" class="inputBoxes" >
+            <label class="formLabels">
+             confirm Remark password :
+            </label>
+            <input type="text" placeholder="confirm Remark" class="inputBoxes" >
+        </div><div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             Security Question:
+            </label>
+            <input type="text" placeholder="type here" class="inputBoxes" >
+            <label class="formLabels">
+             Security Answer :
+            </label>
+            <input type="text" placeholder="type here" class="inputBoxes" >
+        </div><div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             E-mail OTP :
+            </label>
+            <input type="text" placeholder=" " class="inputBoxes" >
+            <label class="formLabels">
+             Enter E-mail OTP :
+            </label>
+            <input type="text" placeholder=" " class="inputBoxes" >
+        </div><div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             Phone OTP :
+            </label>
+            <input type="text" placeholder=" " class="inputBoxes" >
+            <label class="formLabels">
+             Enter phone OTP :
+            </label>
+            <input type="text" placeholder=" " class="inputBoxes" >
+        </div>
+        <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+             Enter Captch :
+            </label>
+            <input type="captch" placeholder="captch" class="captch" >
+        </div>
+         <div class="formFields">
+            <div style="flex:2">
+                </div>
+            <label class="formLabels">
+            </label>
+            <input type="button" value="Save " class="click" >
+        </div>
+    	<div class="formFields moveToRight">
+    		<input type="submit" value="submit" class="niceButton">
+    	</div>
+    </form>
+</div>
+</body>
+</html>

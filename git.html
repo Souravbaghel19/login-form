@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 ">
+ <style>
+ 	.gridparent{
+ 		display: grid;
+ 		padding: 10px;
+ 		background-color: lightblue;
+ 		grid-template-columns: auto auto auto;
+ 		/*grid-column-gap: 30px;
+ 		grid-row-gap: 30px;*/
+ 		grid-gap: 30px 30px;
+ 	}
+ 	.gridchild{
+ 		border: 1px solid black;
+ 		padding: 5px;
+ 		text-align: center;
+ 	}
+ 	.gridchild1{
+ 		border: 1px solid black;
+ 		text-align: center;
+ 		padding: 5px;
+        grid-row-start: 1;
+        grid-row-end: 3;
+ 	}
+ </style>
+</head>
+
+<body>
+<div class="gridparent">
+	                <div class="gridchild1">item 1</div>
+	                <div class="gridchild">item 2</div>
+	                <div class="gridchild">item 3</div>
+	                <div class="gridchild">item 4</div>
+	                <div class="gridchild">item 5</div>
+	                <div class="gridchild">item 6</div>
+	                <div class="gridchild">item 7</div>
+	                <div class="gridchild">item 8</div>
+	                <div class="gridchild">item 9</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,447 @@
+                                                               /*font & text & line */
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!--style>
+p {                              /*line around a element */
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;  
+  padding: 20px;
+  text-align: center;
+}
+</style>
+<style>                           /* The outline-style Property*/
+p {outline-color:red;}
+
+p.dotted {outline-style: dotted;}
+p.dashed {outline-style: dashed;}
+p.solid {outline-style: solid;}
+p.double {outline-style: double;}
+p.groove {outline-style: groove;}
+p.ridge {outline-style: ridge;}
+p.inset {outline-style: inset;}
+p.outset {outline-style: outset;}
+</style>
+<style>                                        /*The outline-color Property*/
+p.ex1 {
+  border: 2px solid black;
+  outline-style: solid;
+  outline-color: red;
+}
+
+p.ex2 {
+  border: 2px solid black;
+  outline-style: dotted;
+  outline-color: blue;
+}
+
+p.ex3 {
+  border: 2px solid black;
+  outline-style: outset;
+  outline-color: grey;
+}
+</style>
+<style>                                /*Using outline-color:invert*/
+p.ex1 {
+  border: 1px solid yellow;
+  outline-style: solid;
+  outline-color: invert;
+}
+</style>
+<style>                       /*The outline-width Property*/
+p.ex1 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thin;
+}
+
+p.ex2 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: medium;
+}
+
+p.ex3 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: thick;
+}
+
+p.ex4 {
+  border: 1px solid black;
+  outline-style: solid;
+  outline-color: red;
+  outline-width: 4px;
+}
+</style>
+<style>                     /*The outline Property*/
+p.ex1 {outline: dashed;}
+p.ex2 {outline: dotted red;}
+p.ex3 {outline: 5px solid yellow;}
+p.ex4 {outline: thick ridge pink;}
+</style>
+<style>                   /* The outline-offset Property*/
+p {
+  margin: 30px;
+  border: 1px solid black;
+  outline: 1px solid red;
+  outline-offset: 15px;
+}
+</style>
+<style>                               /*text color*/
+body {
+  color: blue;
+}
+
+h1 {
+  color: green;
+}
+</style>
+<style>                            /*text align*/
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: left;
+}
+
+h3 {
+  text-align: right;
+}
+</style>
+<style>                                 /* text link*/
+a {
+  text-decoration: none;
+}
+</style>
+<style>                                    /* text decoration*/
+h1 {
+  text-decoration: overline;
+}
+
+h2 {
+  text-decoration: line-through;
+}
+
+h3 {
+  text-decoration: underline;
+}
+</style>
+<style >                       /*text control*/
+p.uppercase {
+  text-transform: uppercase;
+}
+
+p.lowercase {
+  text-transform: lowercase;
+}
+
+p.capitalize {
+  text-transform: capitalize;
+}
+</style>
+<style>                       /*indent text*/
+p {
+  text-indent: 50px;
+}
+</style>
+<style>                      /* letter spacing  */         
+h1 {
+  letter-spacing: 3px;
+}
+
+h2 {
+  letter-spacing: -3px;
+}
+</style>
+<style>                                 /*space b/w lines*/
+p.small {
+  line-height: 0.7;
+}
+
+p.big {
+  line-height: 1.8;
+}
+</style>
+<style>                                    /*text direction*/
+p.ex1 {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+</style>
+<style>                                /*space b/w words*/
+h1 {
+  word-spacing: 10px;
+}
+
+h2 {
+  word-spacing: -5px;
+}
+</style>
+<style>                                /*text shadow*/
+h1 {
+  text-shadow: 3px 2px red;
+}
+</style>
+<style>                             /* disable text wrapping white space*/   
+p {
+  white-space: nowrap;
+}
+</style>
+<style>                                /*vertical-align of image inside a text*/
+img.top {
+  vertical-align: top;
+}
+
+img.middle {
+  vertical-align: middle;
+}
+
+img.bottom {
+  vertical-align: bottom;
+}
+</style>
+<style>                                                 /* text font in css*/ 
+.serif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.sansserif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.monospace {
+  font-family: "Lucida Console", Courier, monospace;
+}
+</style>
+<style>                          /* font size*/
+h1 {
+  font-size: 250%;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+p {
+  font-size: 100%;
+}
+</style>
+<style>                               /* font size in px*/
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 14px;
+}
+</style>
+<style>                                /* font size in em*/
+h1 {
+  font-size: 2.5em; /* 40px/16=2.5em */
+}
+
+h2 {
+  font-size: 1.875em; /* 30px/16=1.875em */
+ }
+
+p {
+  font-size: 0.875em; /* 14px/16=0.875em */
+}
+</style>
+<style>                                     /* font size in multiple form*/
+body {
+  font-size: 100%;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+p {
+  font-size: 0.875em;
+}
+</style>
+<style>                      /* font style */
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}
+</style>
+<style>                                   /*font variant*/
+p.normal {
+  font-variant: normal;
+}
+
+p.small {
+  font-variant: small-caps;
+}
+</style>
+<style>                                    /* text boldness */
+p.normal {
+  font-weight: normal;
+}
+
+p.light {
+  font-weight: lighter;
+}
+
+p.thick {
+  font-weight: bold;
+}
+
+p.thicker {
+  font-weight: 900;
+}
+</style>
+<style>                          /*  font property*/
+p.a {
+  font: 20px Arial, sans-serif;
+}
+
+p.b {
+  font: italic bold 12px/30px Georgia, serif;
+}
+</style-->
+</head>
+<body>
+<!--p>This element has a 2px black border and a green outline with a width of 10px.</p>
+<p class="dotted">A dotted outline</p>
+<p class="dashed">A dashed outline</p>
+<p class="solid">A solid outline</p>
+<p class="double">A double outline</p>
+<p class="groove">A groove outline. The effect depends on the outline-color value.</p>
+<p class="ridge">A ridge outline. The effect depends on the outline-color value.</p>
+<p class="inset">An inset outline. The effect depends on the outline-color value.</p>
+<p class="outset">An outset outline. The effect depends on the outline-color value.</p>
+<h2>The outline-color Property</h2>
+<p>The outline-color property is used to set the color of the outline.</p>
+
+<p class="ex1">A solid red outline.</p>
+<p class="ex2">A dotted blue outline.</p>
+<p class="ex3">An outset grey outline.</p>
+<h2>Using outline-color:invert</h2>
+
+<p class="ex1">A solid invert outline.</p>
+
+<h2>The outline-width Property</h2>
+
+<p class="ex1">A thin outline.</p>
+<p class="ex2">A medium outline.</p>
+<p class="ex3">A thick outline.</p>
+<p class="ex4">A 4px thick outline.</p>
+	<h2>The outline Property</h2>
+
+<p class="ex1">A dashed outline.</p>
+<p class="ex2">A dotted red outline.</p>
+<p class="ex3">A 5px solid yellow outline.</p>
+<p class="ex4">A thick ridge pink outline.</p>
+<h2>The outline-offset Property</h2>
+
+<p>This paragraph has an outline 15px outside the border edge.</p>
+<h1>This is heading 1</h1>
+<p>This is an ordinary paragraph. Notice that this text is blue. The default text color for a page is defined in the body selector.</p>
+<p>Another paragraph.</p>
+	<h1>Heading 1 (center)</h1>
+<h2>Heading 2 (left)</h2>
+<h3>Heading 3 (right)</h3>
+
+<p>The three headings above are aligned center, left and right.</p>
+	<p>A link with no underline: <a href="https://www.w3schools.com">W3Schools.com</a></p>
+		<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+<p class="uppercase">This is some text.</p>
+<p class="lowercase">This is some text.</p>
+<p class="capitalize">This is some text.</p>
+	<p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since. 'Whenever you feel like criticizing anyone,' he told me, 'just remember that all the people in this world haven't had the advantages that you've had.'</p>
+<p>
+This is a paragraph with a standard line-height.<br>
+The default line height in most browsers is about 110% to 120%.<br>
+</p>
+
+<p class="small">
+This is a paragraph with a smaller line-height.<br>
+This is a paragraph with a smaller line-height.<br>
+</p>
+
+<p class="big">
+This is a paragraph with a bigger line-height.<br>
+This is a paragraph with a bigger line-height.<br>
+</p>
+<p>This is the default text direction.</p>
+
+<p class="ex1">This is right-to-left text direction.</p>
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+	<h1>Text-shadow effect</h1>
+<p><b>Note:</b> Internet Explorer 9 and earlier do not support the text-shadow property.</p>
+		<h2>White Space</h2>
+
+<p>
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+</p> to remove the white-space property to see the difference.</p>
+<p>An <img src="w3schools_logo.gif" alt="W3Schools" width="270" height="50"> image with a default alignment.</p><br>
+
+<p>An <img class="top" src="w3schools_logo.gif" alt="W3Schools" width="270" height="50"> image with a top alignment.</p><br>
+
+<p>An <img class="middle" src="w3schools_logo.gif" alt="W3Schools" width="270" height="50"> image with a middle alignment.</p><br>
+
+<p>An <img class="bottom" src="w3schools_logo.gif" alt="W3Schools" width="270" height="50"> image with a bottom alignment.</p>
+	<h1>CSS font-family</h1>
+<p class="serif">This is a paragraph, shown in the Times New Roman font.</p>
+<p class="sansserif">This is a paragraph, shown in the Arial font.</p>
+<p class="monospace">This is a paragraph, shown in the Lucida Console font.</p>
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>Specifying the font-size in em allows all major browsers to resize the text.
+Unfortunately, there is still a problem with older versions of IE. When resizing the text, it becomes larger/smaller than it should.</p>
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<p>This is a paragraph.</p>
+<p>Specifying the font-size in percent and em displays the same size in all major browsers, and allows all browsers to resize the text!</p>
+<p class="normal">This is a paragraph in normal style.</p>
+<p class="italic">This is a paragraph in italic style.</p>
+<p class="oblique">This is a paragraph in oblique style.</p>
+<p class="normal">My name is Hege Refsnes.</p>
+<p class="small">My name is Hege Refsnes.</p>
+	<p class="normal">This is a paragraph.</p>
+<p class="light">This is a paragraph.</p>
+<p class="thick">This is a paragraph.</p>
+<p class="thicker">This is a paragraph.</p>
+<h1>The font Property</h1>
+
+<p class="a">This is a paragraph. The font size is set to 20 pixels, and the font family is Arial.</p>
+
+<p class="b">This is a paragraph. The font is set to italic and bold, the font size is set to 12 pixels, the line height is set to 30 pixels, and the font family is Georgia.</p-->
+</body>
+</html>

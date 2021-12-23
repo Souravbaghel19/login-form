@@ -1,0 +1,132 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+	*{
+		box-sizing: border-box;
+	}
+	body{
+		padding: 0%  15%;
+	}
+	.topbar{
+		background-color: cornflowerblue;
+		color: white;
+		padding: 15px; 
+	}
+	.items{
+		list-style-type: none;
+		padding: 10px;
+	}
+	.items  ul{
+		list-style-type: none;
+		padding: 0;
+    }
+    li{
+    	background-color: violet;
+    	color: white;
+    	padding: 8px;
+    	margin-top: 20px;
+       }
+       .items2 ul{
+       	text-align: center;
+       	padding: 0px;
+       } 
+       .items2 li{
+       	list-style-type: none;
+       }
+       .items2 li{
+       	margin-top: 0px;
+       }
+       .post{
+        padding: 15px; 
+    }
+    .colRow :after{
+    	content: "";
+    	clear:both; 
+    	display: table;	
+    }
+	    [class*="col-"]{
+    	float: left;
+ }
+ .footer {
+    	background-color: blue;
+    	color:white;
+    	text-align:center;
+    	padding:15px;
+}
+
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+@media only screen and (max-width: 768px){
+	 [class*="col-"]{
+    	width: 100%
+ }
+ body{
+		padding: 15%;
+	}
+} 
+</style>
+</head>
+<body>
+<div class="topbar">
+	<h1>My Header</h1>
+</div>
+<div class="colRow">
+<div  class="items col-3">
+	<h1>List items</h1>
+	<ul>
+		<li>Item 1</li> 
+        <li>item 2</li>
+        <li>item 3</li>
+        <li>item 4</li>
+	</ul>
+</div>
+<div class="col-6 post">
+	<h1>Blog post</h1>
+	<p>Data types: Every variable has a type, every expression has a type and all types are strictly
+define more over every assignment should be checked by the compiler by the type
+compatibility hence java language is considered as strongly typed language.
+Java is pure object oriented programming or not?
+</p>
+	<p>
+		Java is not considered as pure object oriented programming language because several
+oops features (like multiple inheritance, operator overloading) are not supported by
+java moreover we are depending on primitive data types which are non objects.
+	</p>
+</div>
+<div  class="items2 col-3">
+	<h1>List items</h1>
+	<ul>
+		<li>
+		<h2>item 1</h2>
+        Details about the items 1  
+		 </li> 
+        <li><h2>item 2</h2>
+        Details about the items 2 
+    </li>
+        <li><h2>item 3</h2>
+        Details about the items 3
+    </li>
+        <li><h2>item 4</h2>
+        Details about the items4
+         </li>
+	   </ul>
+     </div>
+   </div>
+   <div style="clear: both;">
+   <div class="footer">
+   	<h2> this is footer text /area</h2>
+   </div>
+</div>
+ </body>
+</html>

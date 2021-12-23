@@ -1,0 +1,66 @@
+                                             *selector *
+<!DOCTYPE html>
+<html>
+<head>
+	<!--style>
+		.center {
+  text-align: center;     <class selector>
+  color: red;
+		#para1 {
+  text-align: center;
+  color: red;         <id selector>
+		p {
+			color: red;
+            text-align: center;
+		}
+	</style-->
+	<!--style>
+		p.center {
+  text-align: center;    <proper element selector>
+  color: red;
+	</style-->   
+	<!--style>
+		p.center {
+  text-align: center;      <single elemet refer two class>
+  color: red;
+}
+
+p.large {
+  font-size: 300%;
+}
+	</style-->
+	<!--style>
+		* {
+  text-align: center;     <universal selector>
+  color: blue;
+}
+	</style-->
+	<style> 
+		h1, h2, p {
+  text-align: center;    <group selector>
+  color: red;
+}
+	</style>
+</head>
+<body>
+	<!--h1 class="center">This heading will not be affected</h1>
+<p class="center">This paragraph will be red and center-aligned.</p>
+<p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p--> 
+	<!--h1 class="center">This heading will not be affected</h1>
+<p class="center">This paragraph will be red and center-aligned.</p> 
+	<h1 class="center">Red and center-aligned heading</h1>
+<p class="center">Red and center-aligned paragraph.</p> 
+<p>hello this is my first css</p>
+<p>program</p>
+<p>Every paragraph will be affected by the style.</p>
+<p id="para1">Me too!</p>   <element selector>
+<p>And me!</p-->
+	<!--h1>Hello world!</h1>
+<p>Every element on the page will be affected by the style.</p>
+<p id="para1">Me too!</p>
+<p>And me!</p-->
+	<h1>Hello World!</h1>
+<h2>Smaller heading!</h2>
+<p>This is a paragraph.</p>
+</body>
+</html>

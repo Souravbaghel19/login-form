@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style >
+		       .mybox {
+            border: 1px solid black;
+            /* padding: 5%; 
+               padding-left: 45%; 
+               width: 50px;
+               height: 50px;*/
+            background-color: aqua;
+              /* display: inline-block;*/
+               display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            flex-direction: column;
+            align-items: inherit;
+        }
+        .outerBox{
+            border: 10px solid lightcoral;
+           /* padding: 1%;
+            padding-left: 7%;*/
+            background-color: lightyellow; 
+            margin: 10%;
+            display: flex;
+            flex-direction: row;
+            /*align-items: center;*/
+        }
+        .innerBoxes{
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+            border: 2px solid grey;
+        }
+        .bordeC{
+            border: 2px solid black;
+              display: flex;
+              flex-direction: row;
+              flex: 1;
+        }
+	</style>
+</head>
+<body>
+	 <div style="display: none;"> </div>
+<div class="outerBox"> 
+    <div class="innerBoxes">
+    <div class="mybox" style="flex-direction: column;">
+        <div class="bordeC">
+            <h1>1</h1>
+        </div>
+        <div class="bordeC">
+            <h1>2</h1>
+        </div>
+        <!--div style="padding: 45%;">1</div>-->
+    </div>
+    <div class="mybox">
+       <h1>50%</h1>
+    </div>
+    </div>
+
+    <div class="innerBoxes">
+     <div style="flex: 3" class="mybox">
+       <h1>30%</h1>
+    </div>
+     <div style="flex: 7" class="mybox">
+       <h1>70%</h1>
+    </div>
+    </div>
+</div>
+</body>
+</html>

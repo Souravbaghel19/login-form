@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!--style>
+h1 {
+  text-shadow: 2px 2px  5px red;             /* simple shadow effect, color shadow, blur,*/
+}
+</style>
+<style>
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;      /* white shadow text */
+}
+</style>
+<style>
+h1 {
+  text-shadow: 0 0 3px #FF0000;        /* red neon shadow */
+}
+</style>
+<style>
+h1 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;      /* red and blue neon shadow */
+}
+</style>
+<style>
+h1 {
+  color: white;                        /* white text with black,blue and darkblue shadow */
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+</style>
+<style> 
+div {
+  width: 300px;
+  height: 100px;               /* simple box shadow  */
+  padding: 15px;
+  background-color: yellow;
+  box-shadow: 10px 10px;
+}
+</style>
+<style> 
+div {                                 /* color to box shadow */
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: yellow;
+  box-shadow: 10px 10px grey;
+}
+</style>
+<style> 
+div {
+  width: 300px;                           /* color and blur effect to box shadow */
+  height: 100px;
+  padding: 15px;
+  background-color: yellow;
+  box-shadow: 10px 10px 5px grey;
+}
+</style>
+<style>
+div.card {                                 /* create paper - like cards(text) */
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+div.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+div.container {
+  padding: 10px;
+}
+</style>
+<style>
+div.polaroid {                                /* create paper - like cards(polaroid image) */             
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+div.container {
+  padding: 10px;
+}
+</style-->
+</head>
+<body>
+<!--h1>The box-shadow Property</h1>
+<div>This is a div element with a box-shadow</div>
+	<h2>Cards</h2>
+<p>The box-shadow property can be used to create paper-like cards:</p>
+<div class="card">
+  <div class="header">
+    <h1>1</h1>
+  </div>
+   <div class="container">
+    <p>January 1, 2016</p>
+  </div>
+</div>
+<h2>Polaroid Images / Cards</h2>
+<p>The box-shadow property can be used to create paper-like cards:</p>
+<div class="polaroid">
+  <img src="3.jpg" alt="Norway" style="width:100%">
+  <div class="container">
+    <p>Hardanger, Norway</p>
+  </div>
+</div>
+</body>
+</html-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2D transforms</title>
+	<!--style> 
+div {
+  width: 300px;                          /*translate()- method moves an element from its current position*/
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  -ms-transform: translate(50px,100px); /* IE 9 */
+  transform: translate(50px,100px); /* Standard syntax */
+}
+</style>
+<style>
+div {
+  width: 300px;
+  height: 100px;                             /*rotate()- method rotates an element clockwise */
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv {
+  -ms-transform: rotate(20deg); /* IE 9 */
+  transform: rotate(20deg); /* Standard syntax */
+}
+</style>
+<style>
+div {
+  width: 300px;
+  height: 100px;                  /* rotate() method rotate an element counter-clockwise. */
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv {
+  -ms-transform: rotate(-20deg); /* IE 9 */
+  transform: rotate(-20deg); /* Standard syntax */
+}
+</style>
+<style>
+div {
+  margin: 150px;
+  width: 200px;                          /* scale() method increases */
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  -ms-transform: scale(2,3); /* IE 9 */
+  transform: scale(2,3); /* Standard syntax */
+}
+</style>
+<style>
+div {
+  margin: 150px;
+  width: 200px;                          /*scale() method decreases */
+  height: 100px; 
+  background-color: yellow;
+  border: 1px solid black;
+  -ms-transform: scale(0.5,0.5); /* IE 9 */
+  transform: scale(0.5,0.5); /* Standard syntax */
+}
+</style>
+<style>
+div {
+  width: 300px;
+  height: 100px;                   /*skewX()-method skews an element along the X-axis */
+  background-color: yellow;
+  border: 1px solid black;
+}
+div#myDiv {
+  -ms-transform: skewX(20deg); /* IE 9 */
+  transform: skewX(20deg); /* Standard syntax */
+}
+</style>
+<style>
+div {
+  width: 300px;
+  height: 100px;                           /* skewY() method skews an element along the Y-axis */
+  background-color: yellow;
+  border: 1px solid black;
+}
+div#myDiv {
+  -ms-transform: skewY(20deg); /* IE 9 */
+  transform: skewY(20deg); /* Standard syntax */
+}
+</style>
+<style>
+div {
+  width: 300px;
+  height: 100px;                               /* skewY() method skews an element along the x-axis and y-axis */
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv {
+  -ms-transform: skew(20deg,10deg); /* IE 9 */
+  transform: skew(20deg,10deg); /* Standard syntax */
+}
+</style>
+<style>
+div {
+  width: 300px;
+  height: 100px;                         /* matrix -rotate, scale,move and skew element */
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#myDiv1 {
+  -ms-transform: matrix(1, -0.3, 0, 1, 0, 0); /* IE 9 */
+  transform: matrix(1, -0.3, 0, 1, 0, 0); /* Standard syntax */
+}
+
+div#myDiv2 {
+  -ms-transform: matrix(1, 0, 0.5, 1, 150, 0); /* IE 9 */
+  transform: matrix(1, 0, 0.5, 1, 150, 0); /* Standard syntax */
+}
+</style-->
+</head>
+<body>
+<!--h1>The translate() Method</h1>
+<p>The translate() method moves an element from its current position:</p>
+<div>
+This div element is moved 50 pixels to the right, and 100 pixels down from its current position.
+</div>
+<h1>The rotate() Method</h1>
+<p>The rotate() method rotates an element clockwise or counter-clockwise.</p>
+<div>
+This a normal div element.
+</div>
+<div id="myDiv">
+This div element is rotated clockwise 20 degrees.
+</div>
+<h1>The rotate() Method</h1>
+<p>The rotate() method rotates an element clockwise or counter-clockwise.</p>
+<div>
+This a normal div element.
+</div>
+<div id="myDiv">
+This div element is rotated counter-clockwise with 20 degrees.
+</div>
+<h1>The scale() Method</h1>
+<p>The scale() method increases or decreases the size of an element.</p>
+<div>
+This div element is two times of its original width, and three times of its original height.
+</div>
+<h1>The scale() Method</h1>
+<p>The scale() method increases or decreases the size of an element.</p>
+<div>
+This div element is decreased to be half of its original width and height.
+</div>
+<h1>The scale() Method</h1>
+<p>The scale() method increases or decreases the size of an element.</p>
+<div>
+This div element is decreased to be half of its original width and height.
+</div>
+<h1>The skewX() Method</h1>
+<p>The skewX() method skews an element along the X-axis by the given angle.</p>
+<div>
+This a normal div element.
+</div>
+<div id="myDiv">
+This div element is skewed 20 degrees along the X-axis.
+</div>
+<h1>The skewY() Method</h1>
+<p>The skewY() method skews an element along the Y-axis by the given angle.</p>
+<div>
+This a normal div element.
+</div>
+<div id="myDiv">
+This div element is skewed 20 degrees along the Y-axis.
+</div>
+<h1>The matrix() Method</h1>
+<p>The matrix() method combines all the 2D transform methods into one.</p>
+
+<div>
+This a normal div element.
+</div>
+
+<div id="myDiv1">
+Using the matrix() method.
+</div>
+
+<div id="myDiv2">
+Another use of the matrix() method.
+</div>
+</body>
+</html-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3D transforms</title>
+	<!--style>
+div {
+  width: 300px;                    /* rotate around the x axis */
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+#myDiv {
+  transform: rotateX(150deg);
+}
+</style>
+<style>
+div {
+  width: 300px;                         /* rotate around the y-axis */
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#myDiv {
+  transform: rotateY(150deg);
+}
+</style>
+<style>
+div {                                       /* rotate around the z-axis */
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#myDiv {
+  transform: rotateZ(90deg);
+}
+</style>
+</head>
+<body>
+<h1>The rotateX() Method</h1>
+<p>The rotateX() method rotates an element around its X-axis at a given degree.</p>
+<div>
+This a normal div element.
+</div>
+<div id="myDiv">
+This div element is rotated 150 degrees.
+</div>
+<p><b>Note:</b> Internet Explorer 9 (and earlier versions) does not support the rotateX() method.</p-->
+</body>
+</html>

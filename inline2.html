@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>aligning</title>
+	<!--style>
+span.a {
+  display: inline;         /*inline  , inline-block ,  block */
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;  
+  background-color: yellow; 
+}
+
+span.b {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
+}
+
+span.c {
+  display: block;
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;    
+  background-color: yellow; 
+}
+</style>
+</head>
+<body>
+<h1>The display Property</h1>
+
+<h2>display: inline</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="a">Aliquam</span> <span class="a">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: inline-block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="b">Aliquam</span> <span class="b">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+<h2>display: block</h2>
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat scelerisque elit sit amet consequat. Aliquam erat volutpat. <span class="c">Aliquam</span> <span class="c">venenatis</span> gravida nisl sit amet facilisis. Nullam cursus fermentum velit sed laoreet. </div>
+
+</body>
+</html>
+<html>
+<head>
+		<style>
+.nav {
+  background-color: yellow;     /* Horizontal Navigation Links  */ 
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+</style>
+</head>
+<body>
+<h1>Horizontal Navigation Links</h1>
+<p>By default, list items are displayed vertically. In this example we use display: inline-block to display them horizontally (side by side).</p>
+<p>Note: If you resize the browser window, the links will automatically break when it becomes too crowded.</p>
+
+<ul class="nav">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#about">About Us</a></li>
+  <li><a href="#clients">Our Clients</a></li>  
+  <li><a href="#contact">Contact Us</a></li>
+</ul>
+</body>
+</html-->
+
+<html>
+<head>
+	<title> aligning</title>
+	<!--style>                      /*  Center Align with margin  */
+	.center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+<style>                      /* Center aligning Text  */
+.center {
+  text-align: center;
+  border: 3px solid green;
+}
+</style>
+<style>
+img {                     /* Center an Image*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<style>
+.right {                                     /* Right Align */
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+<style>
+body {                                /* Right Align crossbrowser with position  */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  background-color: #b0e0e6;
+}
+</style>
+<style>
+.right {                              /* Right Align with float */
+  float: right;
+  width: 300px;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+</style>
+<style>                         
+body {                               /* Right Align crossbrowser with float  */
+  margin: 0;
+  padding: 0;
+}
+
+.right {
+  float: right;
+  width: 300px;
+  background-color: #b0e0e6;
+}
+</style>
+<style>                   /* Center Vertically  with padding */
+.center {
+  padding: 70px 0;
+  border: 3px solid green;
+}
+</style>
+<style>
+.center {                      /* center vertically and horizontally*/
+  padding: 70px 0;
+  border: 3px solid green;
+  text-align: center;
+  }
+</style>
+<style>
+.center {                   /* Center Vertically  with line-height */
+  line-height: 200px;
+  height: 200px;
+  border: 3px solid green;
+  text-align: center;
+}
+
+.center p {
+  line-height: 1.5;
+  display: inline-block;
+  vertical-align: middle;
+}
+</style-->
+<style>
+.center { 
+  height: 200px;
+  position: relative;
+  border: 3px solid green; 
+}
+
+.center p {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+<!--h2>Center Align Elements</h2>
+<p>To horizontally center a block element (like div), use margin: auto;</p>
+<div class="center">
+  <p><b>Note: </b>Using margin<h2>Center Text</h2>
+<div class="center">
+  <p>This text is centered.</p>
+</div>
+:auto will not work in IE8, unless a !DOCTYPE is declared.</p>
+</div>
+<h2>Center an Image</h2>
+<p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+<img src=5.jpg" alt="Paris" style="width:40%">
+<h2>Right Align</h2>
+<p>An example of how to right align elements with the position property:</p>
+<div class="right">
+  <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+</div>
+<h2>Right Align</h2>
+<div class="container">
+<div class="right">
+    <p><b>Note:</b> When aligning using the position property, always include the !DOCTYPE declaration! If missing, it can produce strange results in IE browsers.</p>
+  </div>
+</div>
+<h2>Right Align</h2>
+<p>An example of how to right align elements with the float property:</p>
+<div class="right">
+  <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+</div>
+<h2>Right Align</h2>
+<div class="right">
+  <p><b>Note:</b> When aligning using the float property, always include the !DOCTYPE declaration! If missing, it can produce strange results in IE browsers.</p>
+</div>
+<h2>Center Vertically</h2>
+<p>In this example, we use the padding property to center the div element vertically:</p>
+<div class="center">
+  <p>I am vertically centered.</p>
+</div>
+<h2>Centering</h2>
+<p>In this example, we use padding and text-align to center the div element vertically and horizontally:</p>
+<div class="center">
+  <p>I am vertically and horizontally centered.</p>
+</div>
+<h2>Centering</h2>
+<p>In this example, we use the line-height property with a value that is equal to the height property to center the div element:</p>
+<div class="center">
+  <p>I am vertically and horizontally centered.</p>
+</div-->
+<h2>Centering</h2>
+<p>In this example, we use positioning and the transform property to vertically and horizontally center the div element:</p>
+<div class="center">
+  <p>I am vertically and horizontally centered.</p>
+</div>
+</body>
+</html>

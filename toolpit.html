@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!--style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+ /* left: 105%;*/                          /*   right toolpit */
+ right: 105%;                              /*  left toolpit  */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+ /* bottom: 100%; */              /* top toolpit */
+  top:100%;                         /* bottom toolpit */
+  left: 50%;                 
+  margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<style>
+.tooltip {                                    / *toolpit with arrow   */
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
+<style>
+.tooltip {                                                  /* animation toolpit */
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+  
+  /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style-->
+</head>
+<!--body style="text-align:center;">
+<h2>Right Tooltip</h2>
+<p>Move the mouse over the text below:</p>
+
+<div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div>
+</body>
+</html-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image style</title>
+	<!--style>
+img {
+  border-radius: 8px;                          /* Rounded Images  */
+}
+</style>
+<style>
+img {
+  border-radius: 50%;                       /*circled image */
+}
+</style>
+<style>
+img {
+  border: 1px solid #ddd;                      /* Thumbnail Images */
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+</style>
+<style>
+img {
+  border: 1px solid #ddd;
+  border-radius: 4px;                           /* Thumbnail Image as Link */
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+</style>
+<style>
+img {
+  max-width: 100%;                     /*Responsive Images */
+  height: auto;
+}
+</style>
+<style>
+.container {
+  position: relative;                 /*Image Text */
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+img { 
+  width: 30%;
+  height: auto;
+  opacity: 0.3;
+}
+</style>
+<style>
+body {margin:25px;}                      /*Responsive Polaroid Images / Cards*/
+
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px 20px;
+}
+</style>
+<style>                            /*Convert the image to grayscale */
+img {
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+}
+</style-->
+</head>
+<body>
+<!--h2>Rounded Images</h2>
+<p>Use the border-radius property to create rounded images:</p-->
+<!--a target="_blank" href="3.jpg">
+<div class="container">
+<img src="3.jpg" alt="Paris" width="20%" height="50%">
+<div class="topleft">Top Left</div>
+</div>
+</a>
+<h2>Responsive Polaroid Images / Cards</h2>
+
+<div class="polaroid">
+  <img src="3.jpg" alt="5 Terre" style="width:100%">
+  <div class="container">
+  <p>Cinque Terre</p>
+  </div>
+</div>
+
+<div class="polaroid">
+  <img src="2.jpg" alt="Norther Lights" style="width:100%">
+  <div class="container">
+  <p>Northern Lights</p>
+  </div>
+</div>
+</body>
+</html-->
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object fit</title>
+	<style>
+.fill {object-fit: fill;}
+.contain {object-fit: contain;}
+.cover {object-fit: cover;}
+.scale-down {object-fit: scale-down;}
+.none {object-fit: none;}
+</style>
+</head>
+<body>
+<!--h2>Using object-fit</h2>
+<p>Here we use "object-fit: cover;", so when we resize the browser window, the aspect ratio of the images is preserved:</p>
+
+<div style="width:100%;height:400px;">
+  <img src="3.jpg" alt="Norway" style="float:left;width:50%;height:100%;object-fit:cover;">
+  <img src="2.jpg" alt="Paris" style="float:left;width:50%;height:100%;object-fit:cover;">
+</div-->
+<h1>The object-fit Property</h1>
+<h2>No object-fit:</h2>
+<img src="2.jpg" alt="Paris" style="width:200px;height:400px">
+<h2>object-fit: fill (this is default):</h2>
+<img class="fill" src="5.jpg" alt="Paris" style="width:200px;height:400px">
+<h2>object-fit: contain:</h2>
+<img class="contain" src="3.jpg" alt="Paris" style="width:200px;height:400px">
+<h2>object-fit: cover:</h2>
+<img class="cover" src="1.jpg" alt="Paris" style="width:200px;height:400px">
+<h2>object-fit: scale-down:</h2>
+<img class="scale-down" src="2.jpg" alt="Paris" style="width:200px;height:400px">
+<h2>object-fit: none:</h2>
+<img class="none" src="1.jpg" alt="Paris" style="width:200px;height:400px">
+</body>
+</html>

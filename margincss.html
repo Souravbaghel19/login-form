@@ -1,0 +1,289 @@
+                               /* margin & pedding & height and width & box */ 
+<!DOCTYPE html>
+<html>
+<head>
+	<!--style>
+		div {
+  border: 1px solid black;     /*margin of each side */
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  background-color: lightblue;
+}
+	</style>
+	<style>
+div {
+  border: 1px solid black;      /*combine margin in one line*/
+  margin: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+</style>
+<style>
+div {
+  border: 1px solid black;     /*three side margin*/
+  margin: 25px 50px 75px;
+  background-color: lightblue;
+}
+</style>
+<style>
+div {
+  border: 1px solid black;    / * two side margin*/
+  margin: 25px 50px;
+  background-color: lightblue;
+}
+</style>
+<style>
+div {
+  border: 1px solid black;    /* one side margin*
+  margin: 25px;
+  background-color: lightblue;
+}
+</style>
+<style>
+div {                             /*aotu center margin */
+  width:300px;
+  margin: auto;
+  border: 1px solid red;
+}
+</style>
+<style>
+div {
+  border: 1px solid red;
+  margin-left: 100px;
+}
+p.ex1 {
+  margin-left: inherit;          /*parent margin*/
+}
+</style>
+<style>
+h1 {
+  margin: 0 0 50px 0;      /*margin collapse*/
+}
+
+h2 {
+  margin: 20px 0 0 0;
+}
+</style>
+<style>
+div {
+  border: 1px solid black;        /*padding*/
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+}
+</style>
+<style>
+div {
+  border: 1px solid black;
+  padding: 25px 50px 75px 100px;
+  background-color: lightblue;
+}
+</style>
+<style>
+div {
+  border: 1px solid black;
+  padding: 25px 50px 75px;
+  background-color: lightblue;
+}
+</style>
+<style>
+div {
+  border: 1px solid black;
+  padding: 25px 50px;
+  background-color: lightblue;
+}
+</style>
+<style>
+div {
+  border: 1px solid black;
+  padding: 25px;
+  background-color: lightblue;
+}
+</style>
+<style>
+div.ex1 {                             /*element width without box */
+  width: 300px;
+  background-color: yellow;
+}
+
+div.ex2 {
+  width: 300px;
+  padding: 25px;
+  background-color: lightblue;
+}
+</style>
+<style>          /* element width with box */
+div.ex1 {
+  width: 300px;
+  background-color: yellow;
+}
+
+div.ex2 {
+  width: 300px;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: lightblue;
+}
+</style>
+<style>         /* set left padding */
+p.padding {
+  padding-left: 2cm;
+}
+p.padding2 {
+  padding-left: 50%;
+}
+</style>
+<style>     /* right pedding */
+p.padding {
+  padding-right: 2cm;
+}
+
+p.padding2 {
+  padding-right: 50%;
+}
+</style>
+<style>     /* top padding */
+p.padding {
+  padding-top: 2cm;
+}
+
+p.padding2 {
+  padding-top: 50%;
+}
+</style>
+<style>
+p.padding {
+  padding-bottom:2cm;
+}
+
+p.padding2 {
+  padding-bottom:50%;
+}
+</style>                    /* height & width */
+<style>
+div {
+  height: 100px;
+  width: 500px;
+  background-color: powderblue;
+}
+</style>
+<style>
+div {
+  max-width: 500px;
+  height: 100px;
+  background-color: powderblue;
+}
+</style>
+<style>      /* set the height with different element */
+img.one {
+  height: auto;
+}
+img.two {
+  height: 200px;
+  width: 200px;
+}
+div.three {
+  height: 300px;
+  width: 300px;
+  background-color: powderblue;
+}
+</style>
+<style>
+html, body {     /*   height in % */
+  height: 100%;
+}
+
+img.one {
+  height: auto;
+  width: auto;
+}
+
+img.two {
+  height: 50%;
+  width: 50%;
+}
+</style>
+<style>
+div {
+  max-width: 400px;
+  min-width: 100px;
+  background-color: powderblue;
+}             
+</style>
+<style>                    /* demonstrating box */
+div {
+  background-color: lightgrey;
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}
+</style>
+<style>       /* specify the width of element in 250px */
+div {
+  width: 320px;
+  padding: 10px;
+  border: 5px solid gray;
+  margin: 0;
+}
+</style-->
+</head>
+<body>
+<!--h2>Using individual margin properties</h2>
+<div>This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</div>
+	<h2>Use of the inherit value</h2>
+<p>Let the left margin be inherited from the parent element:</p>
+<div>
+<p class="ex1">This paragraph has an inherited left margin (from the div element).</p>
+</div>
+<p>In this example the h1 element has a bottom margin of 50px and the h2 element has a top margin of 20px. Then, the vertical margin between h1 and h2 should have been 70px (50px + 20px). However, due to margin collapse, the actual margin ends up being 50px.</p>
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+	<h2>Padding and element width</h2>
+<div class="ex1">This div is 300px wide.</div><br>
+<div class="ex2">The width of this div is 350px, even though it is defined as 300px in the CSS.</div>
+<h1>The padding-left Property</h1>
+
+<p>This is a text with no left padding.</p>
+<p class="padding">This text has a left padding of 2 cm.</p>
+<p class="padding2">This text has a left padding of 50%.</p>
+	<h2>Set the height and width of elements</h2>
+
+<p>Original image:</p>
+<img class="one" src="img2.jpg" width="300" height="300"><br>
+
+<p>Sized image (200x200 pixels):</p>
+<img class="two" src="img2.jpg" width="300" height="300"><br>
+
+<p>The height and width of this div element is 300px:</p>
+<div class="three"></div>
+	<h2>Set the height and width in %</h2>
+<p>Resize the browser window to see the effect.</p>
+
+<p>Original image:</p>
+<img class="one" src="img2.jpg" width="300" height="300"><br>
+
+<p>Sized image (in %):</p>
+<img class="two" src="img2.jpg" width="300" height="300">
+<h2>Set the max-width and min-width of an element</h2>
+<p>Resize the browser window to see the effect.</p>
+
+<div>This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.
+This is some text. This is some text. This is some text.</div>
+<h2>Demonstrating the Box Model</h2>
+
+<p>The CSS box model is essentially a box that wraps around every HTML element. It consists of: borders, padding, margins, and the actual content.</p>
+
+<div>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div-->
+<h2>Calculate the total width:</h2>
+
+<img src="img2.jpg" width="350" height="263" alt="Klematis">
+<div>The picture above is 350px wide. The total width of this element is also 350px.</div>
+}
+</style>
+</body>
+</html>

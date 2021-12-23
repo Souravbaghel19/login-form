@@ -1,0 +1,894 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+	Registration Form
+</title><link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <meta property="og:image" content="https://www.nbccindia.com/images/LOGO1.png" /><meta property="og:title" content="NBCC Recruitment Portal" /><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" /><link rel="shortcut icon" href="images/fevicon.png" type="image/x-icon" /><link rel="icon" href="images/fevicon.ico" type="image/x-icon" />
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <link href="cal/CalendarControl.css" rel="stylesheet" type="text/css" />
+
+    <script src="cal/CalendarControl.js" type="text/javascript"></script>
+
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" language="JavaScript">
+        function GetBodyContent() {
+            window.print();
+            document.getElementById("ctl00$ContentPlaceHolder1$bodyHtml").value = document.body.innerHTML;
+        }
+    </script>
+
+    <script type="text/javascript">
+        function LimtCharacters(txtMsg, CharLength) {
+            chars = txtMsg.value.length;
+            //        document.getElementById(indicator).innerHTML = CharLength - chars;
+            if (chars > CharLength) {
+                txtMsg.value = txtMsg.value.substring(0, CharLength);
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        /*.btnb
+        {
+            
+           
+            background-color: #337ab7;
+            
+        }
+        .active, .btnb:hover
+        {
+            background-color: #666 !important;
+            color: white;
+        }*/ /* Style the active class, and buttons on mouse-over */
+    </style>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"    crossorigin="anonymous"></script>
+
+    <script src="js/duplicate.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            if (window.IsDuplicate()) {
+
+                // alert user the tab is duplicate
+                alert("Duplicate Window not allowed \n window already opened in another Tab or window \n This window  will close, Click OK");
+
+                // close the current tab
+              var currentWindow=  window.open('about:blank', '_self');
+                currentWindow.close(); 
+
+            }
+
+        });
+    </script>
+    
+<link href="/Rec/WebResource.axd?d=XPvJkBbkvV3cW22ap9Mr5p9SIfR4SPV2bPhEmNqCMlHP-PTpMv7vPeoln_gdMatkLmeMOEBQL82Vmb16dQkGZ4zUg3sUng0JHiUSBEz4KC2J2tdYi32yc-BRaXxpPR5b3N3JS4UnpjOy1W5XGACYrg2&amp;t=635063165720000000" type="text/css" rel="stylesheet" /></head>
+<body style="background-color: Gray;">
+    <form name="aspnetForm" method="post" action="./Registeration.aspx?mode=2" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" id="ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTEyNTM5MzEyNw8WBB4LTm9WYWxpZGF0ZWRoHg5Ob1ZhbGlkYXRlZEVtbGgWAmYPZBYCAgMPZBYCAgMPZBYIAgIPFgIeBWNsYXNzBQdtYWcyMHB4ZAIDDxYCHwIFBmFjdGl2ZWQCBw8WAh4HVmlzaWJsZWgWAgIBDxAPFgYeDURhdGFUZXh0RmllbGQFBVBhcnR5Hg5EYXRhVmFsdWVGaWVsZAUHUGFydHlJRB4LXyFEYXRhQm91bmRnZBAVBwAhRFkuIFBST0pFQ1QgTUFOQUdFUiAoRUxFQ1RSSUNBTCkgG01BTkFHRU1FTlQgVFJBSU5FRSAoQ0lWSUwpICBNQU5BR0VNRU5UIFRSQUlORUUgKEVMRUNUUklDQUwpIBdQUk9KRUNUIE1BTkFHRVIgKENJVklMKRFTUi4gU1RFTk9HUkFQSEVSICBPRkZJQ0UgQVNTSVNUQU5UDQooU1RFTk9HUkFQSEVSKRUHAAIyMgIyMwIyNAIyNQIyNgIyNxQrAwdnZ2dnZ2dnFgECBWQCCA8WAh8DZxYaAgkPEGRkFgBkAgsPFgIfA2gWAgIBDxBkZBYAZAINDxAPFgYfBAUFUGFydHkfBQUHUGFydHlJRB8GZ2QQFQYAB0dlbmVyYWwPU2NoZWR1bGVkIENhc3RlD1NjaGVkdWxlZCBUcmliZShPdGhlciBCYWNrd2FyZCBDbGFzc2VzKE5vbi1DcmVhbXkgTGF5ZXIpG0Vjb25vbWljYWxseSBXZWFrZXIgU2VjdGlvbhUGAAFHAlNDAlNUBk9CQ05DTANFV1MUKwMGZ2dnZ2dnFgFmZAIPDxBkZBYAZAIRD2QWAgIBDxBkZBYAZAITDxBkZBYAZAIbDw8WAh4EVGV4dAULMDgtSmFuLTIwMjJkZAI3D2QWAgIBDxBkZBYAZAI5D2QWAgIBDxBkZBYAZAI9DxAPFgYfBAUFUGFydHkfBQUHUGFydHlJRB8GZ2QQFSUAG0FuZGFtYW4gYW5kIE5pY29iYXIgSXNsYW5kcw5BbmRocmEgUHJhZGVzaBFBcnVuYWNoYWwgUHJhZGVzaAVBc3NhbQVCaWhhcgpDaGFuZGlnYXJoDENoaGF0dGlzZ2FyaBZEYWRyYSBhbmQgTmFnYXIgSGF2ZWxpDURhbWFuIGFuZCBEaXUFRGVsaGkDR29hB0d1amFyYXQHSGFyeWFuYRBIaW1hY2hhbCBQcmFkZXNoEUphbW11IGFuZCBLYXNobWlyCUpoYXJraGFuZAlLYXJuYXRha2EGS2VyYWxhC0xha3NoYWR3ZWVwDk1hZGh5YSBQcmFkZXNoC01haGFyYXNodHJhB01hbmlwdXIJTWVnaGFsYXlhB01pem9yYW0ITmFnYWxhbmQGT2Rpc2hhClB1ZHVjaGVycnkGUHVuamFiCVJhamFzdGhhbgZTaWtraW0KVGFtaWwgTmFkdQlUZWxhbmdhbmEHVHJpcHVyYQ1VdHRhciBQcmFkZXNoC1V0dGFyYWtoYW5kC1dlc3QgQmVuZ2FsFSUAATEBMgEzATQBNQE2ATcBOAE5AjEwAjExAjEyAjEzAjE0AjE1AjE2AjE3AjE4AjE5AjIwAjIxAjIyAjIzAjI0AjI1AjI2AjI3AjI4AjI5AjMwAjMxAjMyAjMzAjM0AjM1AjM2FCsDJWdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAI/DxBkZBYAZAJLDxAPFgYfBAUFUGFydHkfBQUHUGFydHlJRB8GZ2QQFSUAG0FuZGFtYW4gYW5kIE5pY29iYXIgSXNsYW5kcw5BbmRocmEgUHJhZGVzaBFBcnVuYWNoYWwgUHJhZGVzaAVBc3NhbQVCaWhhcgpDaGFuZGlnYXJoDENoaGF0dGlzZ2FyaBZEYWRyYSBhbmQgTmFnYXIgSGF2ZWxpDURhbWFuIGFuZCBEaXUFRGVsaGkDR29hB0d1amFyYXQHSGFyeWFuYRBIaW1hY2hhbCBQcmFkZXNoEUphbW11IGFuZCBLYXNobWlyCUpoYXJraGFuZAlLYXJuYXRha2EGS2VyYWxhC0xha3NoYWR3ZWVwDk1hZGh5YSBQcmFkZXNoC01haGFyYXNodHJhB01hbmlwdXIJTWVnaGFsYXlhB01pem9yYW0ITmFnYWxhbmQGT2Rpc2hhClB1ZHVjaGVycnkGUHVuamFiCVJhamFzdGhhbgZTaWtraW0KVGFtaWwgTmFkdQlUZWxhbmdhbmEHVHJpcHVyYQ1VdHRhciBQcmFkZXNoC1V0dGFyYWtoYW5kC1dlc3QgQmVuZ2FsFSUAATEBMgEzATQBNQE2ATcBOAE5AjEwAjExAjEyAjEzAjE0AjE1AjE2AjE3AjE4AjE5AjIwAjIxAjIyAjIzAjI0AjI1AjI2AjI3AjI4AjI5AjMwAjMxAjMyAjMzAjM0AjM1AjM2FCsDJWdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dkZAJNDxBkZBYAZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUkY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRzYW1hZGRyZXNzG3oYD1ZFg+wqZJ2udKg0AHgLPYIWsxuzw/xsjLKK00o=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/Rec/WebResource.axd?d=mV5y36DN9N9VHIsESr63k6MbdFkNEauH5OFS3yCwukTLJzOrQSpn57DYHzJkjnxFt1yMwPfzDR547nPYxGBQq-MkHf_L-t61_1L_HhD3zj01&amp;t=637454266754849868" type="text/javascript"></script>
+
+
+<script src="/Rec/WebResource.axd?d=fsF924FNo4lIgVt670Pxhgr_4VKS79YP9JocogDXq3anx5E4LfgIBi6bD4riBCelV9qkFgp7OTsM34NdxkwGWMTTUHwDSPvVa3ZAqJd3b_w1&amp;t=637454266754849868" type="text/javascript"></script>
+<script src="/Rec/ScriptResource.axd?d=Ck9fcozetNG1iIheS0Qbau_a-QKlZBPNaGysKvpFN_EoZvuZHevu9UZlPyeZbu8jqZ16pCpS_Yy8tdytp3Ab9uuoqgzzaEx0xrErGEccEFNU2Fc1DRflvkq0hUtp7l4-0&amp;t=ffffffff886f56f4" type="text/javascript"></script>
+<script src="/Rec/Registeration.aspx?_TSM_HiddenField_=ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.607%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3ae96eec5b-f5fc-47c8-9cba-2a4f2f4c43f0%3a475a4ef5%3aaddc6819%3a5546a2b%3ad2e10b12%3aeffe2a26%3a37e2e5c9%3a5a682656%3ac7029a2%3ae9e598a9" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E1A254FD" />
+	<input type="hidden" name="__SCROLLPOSITIONX" id="__SCROLLPOSITIONX" value="0" />
+	<input type="hidden" name="__SCROLLPOSITIONY" id="__SCROLLPOSITIONY" value="187" />
+</div>
+
+        <div class="container" style="max-width: 100%;">
+            <div class="panel panel-primary" style="width: 100%;">
+                <div class="panel-body">
+                    <div class="col-lg-12">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <img src="images/RecruitmentPortal1.jpg" height="100%" width="100%" alt="" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="panel panel-primary" style="width: 100%;">
+                                <div class="panel-heading" style="padding: 19px 19px;">
+                                    
+                                    <div style="text-align: right; margin-top: -10px;" class="col-lg-12">
+                                        
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div style="height: auto">
+                                        
+    
+    
+
+    <script src="js/stepform.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode != 46 && charCode > 31
+                && (charCode < 48 || charCode > 57))
+                return false;
+
+            return true;
+        }
+
+        function tempAlert(msg, duration) {
+            var el = document.createElement("div");
+            el.setAttribute("style", "position:absolute;top:40%;left:20%;background-color:blue;border:1px solid red;padding:50px 70px");
+            el.innerHTML = msg;
+            setTimeout(function () {
+                el.parentNode.removeChild(el);
+            }, duration);
+            document.body.appendChild(el);
+        }
+
+        var d = document.getElementById('d');
+        d.onclick = function () { tempAlert("close", 1000); };
+
+    </script>
+
+
+
+
+
+    <style type="text/css">
+        .ajax__calendar {
+            z-index: 1000000 !important;
+        }
+
+        .ft16 {
+            font-size: 16px !important;
+        }
+         .active {
+            color: #fff !important;
+            background-color: #337ab7;
+            border-color: #337ab7;
+            padding: 22px;
+            border-radius: 18px;
+        }
+          .active a{
+            color: #fff !important;
+    </style>
+    <script language="Javascript" type="text/javascript"> 
+
+        function onlyAlphabets(e, t) {
+            try {
+                if (window.event) {
+                    var charCode = window.event.keyCode;
+                }
+                else if (e) {
+                    var charCode = e.which;
+                }
+                else { return true; }
+                if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || (charCode = 32))
+                    return true;
+                else
+                    return false;
+            }
+            catch (err) {
+                alert(err.Description);
+            }
+        }
+
+    </script>
+
+    
+
+
+
+    <script>
+        function UserDeleteConfirmation() {
+            return confirm("Are you sure you want to Submit the details? You cannot Edit the details after final submit.");
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        function alphabet(e) {
+            var k;
+            document.all ? k = e.keyCode : k = e.which;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123));
+        }
+        function alphabetWithSpace(e) {
+            var k;
+            document.all ? k = e.keyCode : k = e.which;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123) || (k == 32));
+        }
+        function alphanumeric(e) {
+            var k;
+            document.all ? k = e.keyCode : k = e.which;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123) || (k == 32) || (k >= 48 && k <= 57));
+        }
+        function alphanumericWithSpaceCommaDot(e) {
+            var k;
+            document.all ? k = e.keyCode : k = e.which;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123) || (k == 32) || (k == 8) || (k == 44) || (k == 46) || (k == 96) || (k >= 48 && k <= 57));
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function RestrictSpaceSpecial(e) {
+            var k;
+            document.all ? k = e.keyCode : k = e.which;
+            return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+        }
+    </script>
+    <script>
+        function ValidateRegForm() {
+
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtfirstname').value == "") {
+                alert('Enter Your First Name');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtfirstname').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtfathername').value == "") {
+                alert('Enter Your Father Name');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtfathername').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtDate').value == "") {
+                alert('select Date of Birth');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtDate').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_drpgender').value == "") {
+                alert('Select gender');
+                document.getElementById('ctl00_ContentPlaceHolder1_drpgender').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_drpmartialstatus').value == "") {
+                alert('Select Marital status');
+                document.getElementById('ctl00_ContentPlaceHolder1_drpmartialstatus').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtmobile').value == "") {
+                alert('Enter Your Mobile Number');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtmobile').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtemail').value == "") {
+                alert('Enter Your Email Id');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtemail').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_drpcategory').value == "") {
+                alert('Select Category');
+                document.getElementById('ctl00_ContentPlaceHolder1_drpcategory').focus();
+                return false;
+            }
+
+
+            if (document.getElementById('ctl00_ContentPlaceHolder1_drpReligion').value == "Select Religion") {
+                alert('Select religion');
+                document.getElementById('ctl00_ContentPlaceHolder1_drpReligion').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtcommunicationaddress').value == "") {
+                alert('Enter Communication address');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtcommunicationaddress').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_drpstate').value == "--Select--") {
+                alert('Select State');
+                document.getElementById('ctl00_ContentPlaceHolder1_drpstate').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtcity').value == "") {
+                alert('Enter city');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtcity').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtpincode').value == "") {
+                alert('Enter PIN Code');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtpincode').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtpermanentaddress').value == "") {
+                alert('Enter Your permanent Address');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtpermanentaddress').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_drppermanentstate').value == "--Select--") {
+                alert('Select state');
+                document.getElementById('ctl00_ContentPlaceHolder1_drppermanentstate').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtpermanentcity').value == "") {
+                alert('Enter City');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtpermanentcity').focus();
+                return false;
+            }
+            if (document.getElementById('ctl00_ContentPlaceHolder1_txtpermanentpincode').value == "") {
+                alert('Enter PIN Code');
+                document.getElementById('ctl00_ContentPlaceHolder1_txtpermanentpincode').focus();
+                return false;
+            }
+            if (!UserDeleteConfirmation()) return false;
+
+
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#txtAadhar').on('keyup', function () {
+                var inp = $('#txtAadhar').val();
+                if (inp.length == 3 || inp.length == 9) {
+                    $('#txtAadhar').val(inp + '-');
+                }
+                else {
+                    //do Nothing
+                }
+            });
+        });
+    </script>
+
+    <script>
+        function startCountdown(timeLeft) {
+            var interval = setInterval(countdown, 1000);
+            update();
+
+            function countdown() {
+                if (--timeLeft > 0) {
+                    update();
+                } else {
+                    clearInterval(interval);
+                    update();
+                    completed();
+                }
+            }
+
+            function update() {
+                hours = Math.floor(timeLeft / 3600);
+                minutes = Math.floor((timeLeft % 3600) / 60);
+                seconds = timeLeft % 60;
+
+                document.getElementById('time-left').innerHTML = '' + hours + ':' + minutes + ':' + seconds;
+            }
+
+            function completed() {
+                // Do whatever you need to do when the timer runs out...
+            }
+        }
+    </script>
+
+
+
+    <div class="col-lg-12" onload="startCountdown(20);">
+        <div style="width: 100%; vertical-align: middle;">
+            <div class="col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        Registration Form
+                    </div>
+                    <div class="panel-body">
+                        
+                        <!-- MultiStep Form -->
+                        <hr style="border-width: 4px; border-color: rgb(230, 230, 230);">	
+                        <div class="outer-container">
+                            <div id="Div1" class="aiia-wizard">
+                                <div class="aiia-wizard-progress-buttons-wrapper row" style="display: block;">
+                                    <div class="col-md-12">
+                                        <ul class="nav nav-pills nav-justified aiia-wizard-progress-buttons-placeholder mainli">
+                                            <li id="ctl00_ContentPlaceHolder1_headpost" data-position="2" class="mag20px"><a href="javascript:void(0)">
+                                                <h1>1.
+                                                </h1>
+                                                Post Applied For</a></li>
+                                            <li id="ctl00_ContentPlaceHolder1_headdetails" data-position="1" class="active"><a href="javascript:void(0)">
+                                                <h1>2.
+                                                </h1>
+                                                Personal Details</a></li>
+                                            
+                                            
+                                            
+                                        </ul>
+                                    </div>
+                                </div>
+                                <hr style="border-width: 4px; border-color: rgb(230, 230, 230);">
+                                
+                                
+                                <div id="ctl00_ContentPlaceHolder1_personaldetails" class="aiia-wizard-step">
+                                    
+                                    <div class="step-content">
+                                        <div class="row">
+                                            <div class="Disclaimermain" style="width: 100%">
+                                                <h4 style="">Note :</h4>
+                                                <ul>
+                                                    <li>Name and Father Name should be as per matriculation educational certificate.
+                                                    </li>
+                                                    <li><span style="color: Red;">*</span> Fields are mandatory </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        First Name <span style="color: red">*</span></label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtfirstname" type="text" maxlength="20" id="ctl00_ContentPlaceHolder1_txtfirstname" class="form-control heightauto" onkeypress="return alphabet(event,this);" AutoComplete="off" placeholder="Enter First Name" onPaste="javascript: return false;" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Middle Name
+                                                    </label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtmiddlename" type="text" maxlength="20" id="ctl00_ContentPlaceHolder1_txtmiddlename" class="form-control heightauto" onkeypress="return alphabetWithSpace(event,this);" AutoComplete="off" placeholder="Enter Middle Name" onPaste="javascript: return false;" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Last Name
+                                                        </label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtlastname" type="text" maxlength="20" id="ctl00_ContentPlaceHolder1_txtlastname" class="form-control heightauto" onkeypress="return alphabetWithSpace(event,this);" AutoComplete="off" placeholder="Enter Last Name" onPaste="javascript: return false;" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Father's Name <span style="color: red">*</span></label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtfathername" type="text" maxlength="50" id="ctl00_ContentPlaceHolder1_txtfathername" class="form-control heightauto" AutoComplete="off" placeholder="Enter Father Name" onkeypress="return alphabetWithSpace(event,this);" onPaste="javascript: return false;" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Whether Person With Disability (PWD)/ Physically Handicapped (PH)? <span style="color: red">*</span></label>
+                                                    <table id="ctl00_ContentPlaceHolder1_rdiodisability" border="0">
+	<tr>
+		<td><input id="ctl00_ContentPlaceHolder1_rdiodisability_0" type="radio" name="ctl00$ContentPlaceHolder1$rdiodisability" value="Y" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rdiodisability$0\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_ContentPlaceHolder1_rdiodisability_0">Yes</label></td><td><input id="ctl00_ContentPlaceHolder1_rdiodisability_1" type="radio" name="ctl00$ContentPlaceHolder1$rdiodisability" value="N" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rdiodisability$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_ContentPlaceHolder1_rdiodisability_1">No</label></td>
+	</tr>
+</table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Category <span style="color: red">*</span></label>
+                                                    <select name="ctl00$ContentPlaceHolder1$drpcategory" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$drpcategory\&#39;,\&#39;\&#39;)&#39;, 0)" id="ctl00_ContentPlaceHolder1_drpcategory" class="form-control form-select heightauto">
+	<option selected="selected" value=""></option>
+	<option value="G">General</option>
+	<option value="SC">Scheduled Caste</option>
+	<option value="ST">Scheduled Tribe</option>
+	<option value="OBCNCL">Other Backward Classes(Non-Creamy Layer)</option>
+	<option value="EWS">Economically Weaker Section</option>
+
+</select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Whether Departmental NBCC Employee? <span style="color: red">*</span></label>
+                                                    <table id="ctl00_ContentPlaceHolder1_radionbccemployee" border="0">
+	<tr>
+		<td><input id="ctl00_ContentPlaceHolder1_radionbccemployee_0" type="radio" name="ctl00$ContentPlaceHolder1$radionbccemployee" value="Y" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$radionbccemployee$0\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_ContentPlaceHolder1_radionbccemployee_0">Yes</label></td><td><input id="ctl00_ContentPlaceHolder1_radionbccemployee_1" type="radio" name="ctl00$ContentPlaceHolder1$radionbccemployee" value="N" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$radionbccemployee$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_ContentPlaceHolder1_radionbccemployee_1">No</label></td>
+	</tr>
+</table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Whether Ex-Servicemen? <span style="color: red">*</span></label>
+                                                    <table id="ctl00_ContentPlaceHolder1_rdoexservice" border="0">
+	<tr>
+		<td><input id="ctl00_ContentPlaceHolder1_rdoexservice_0" type="radio" name="ctl00$ContentPlaceHolder1$rdoexservice" value="Y" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rdoexservice$0\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_ContentPlaceHolder1_rdoexservice_0">Yes</label></td><td><input id="ctl00_ContentPlaceHolder1_rdoexservice_1" type="radio" name="ctl00$ContentPlaceHolder1$rdoexservice" value="N" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$rdoexservice$1\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_ContentPlaceHolder1_rdoexservice_1">No</label></td>
+	</tr>
+</table>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Date Of Birth <span style="color: red">*</span></label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtDate" type="text" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$txtDate\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;javascript: return false;" id="ctl00_ContentPlaceHolder1_txtDate" class="form-control heightauto" AutoComplete="off" placeholder="Click to select date of birth" onKeyDown="javascript: return false;" onPaste="javascript: return false;" />
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Age as on date(<span id="ctl00_ContentPlaceHolder1_lblageAsonDt">08-Jan-2022</span>)</label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtage" type="text" id="ctl00_ContentPlaceHolder1_txtage" disabled="disabled" class="form-control heightauto" AutoComplete="off" onPaste="javascript: return false;" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Gender <span style="color: red">*</span></label>
+                                                    <select name="ctl00$ContentPlaceHolder1$drpgender" id="ctl00_ContentPlaceHolder1_drpgender" class="form-control form-select heightauto">
+	<option selected="selected" value="">Select Gender</option>
+	<option value="M">Male</option>
+	<option value="F">Female</option>
+	<option value="T">Transgender</option>
+
+</select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Marital Status <span style="color: red">*</span></label>
+                                                    <select name="ctl00$ContentPlaceHolder1$drpmartialstatus" id="ctl00_ContentPlaceHolder1_drpmartialstatus" class="form-control form-select heightauto">
+	<option selected="selected" value="">Select Marital Status</option>
+	<option value="M">Married</option>
+	<option value="S">Single</option>
+	<option value="D">Divorced</option>
+
+</select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Email <span style="color: red">*</span></label>
+
+                                                    <div class="input-group">
+                                                        <input name="ctl00$ContentPlaceHolder1$txtemail" type="email" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$txtemail\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_ContentPlaceHolder1_txtemail" class="form-control heightauto" AutoComplete="off" onPaste="javascript: return false;" placeholder="Enter Email ID" style="text-transform: lowercase" />
+                                                        <span>&nbsp;</span>
+                                                        
+                                                    </div>
+
+                                                    <span id="ctl00_ContentPlaceHolder1_regexEmailValid" style="color:Red;visibility:hidden;">Invalid Email Address</span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Mobile <span style="color: red">*</span></label>
+                                                    <div class="input-group">
+                                                        <input name="ctl00$ContentPlaceHolder1$txtmobile" type="text" maxlength="10" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$txtmobile\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;return isNumberKey(event)" id="ctl00_ContentPlaceHolder1_txtmobile" class="form-control heightauto" AutoComplete="off" placeholder="Enter Mobile Number" onPaste="javascript: return false;" />
+                                                        <span>&nbsp;</span>
+                                                        
+                                                    </div>
+                                                    <span id="ctl00_ContentPlaceHolder1_RegularExpressionValidator1" style="color:Red;visibility:hidden;">Only numbers (10 digits)</span>
+
+                                                </div>
+                                            </div>
+                                            
+
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Aadhar Number (Optional)</label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtAadhar" type="text" maxlength="16" id="ctl00_ContentPlaceHolder1_txtAadhar" class="form-control heightauto" onkeypress="return isNumberKey(event)" AutoComplete="off" placeholder="Enter Aadhar Number" onPaste="javascript: return false;" />
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Religion <span style="color: red">*</span></label>
+                                                    <select name="ctl00$ContentPlaceHolder1$drpReligion" id="ctl00_ContentPlaceHolder1_drpReligion" class="form-control form-select heightauto">
+	<option selected="selected" value="">Select Religion</option>
+	<option value="Hindu">Hindu</option>
+	<option value="Muslim">Muslim / Islam</option>
+	<option value="Sikh">Sikh</option>
+	<option value="Christian">Christian</option>
+	<option value="Buddhist">Buddhist</option>
+	<option value="Jain">Jain</option>
+	<option value="Jew">Jew</option>
+	<option value="Other">Other</option>
+
+</select>
+                                                </div>
+                                            </div>
+
+
+                                            
+                                            
+                                            <div class="col-sm-12">
+                                                <div class="step-content">
+                                                    <h5 class="de">Communication Details</h5>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Correspondence Address <span style="color: red">*</span></label>
+                                                    <textarea name="ctl00$ContentPlaceHolder1$txtcommunicationaddress" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtcommunicationaddress" class="form-control heightauto" AutoComplete="off" onPaste="javascript: return false;" onkeypress="return alphanumericWithSpaceCommaDot(event,this);">
+</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        State: <span style="color: red">*</span></label>
+                                                    <select name="ctl00$ContentPlaceHolder1$drpstate" id="ctl00_ContentPlaceHolder1_drpstate" class="form-control form-select heightauto">
+	<option selected="selected" value=""></option>
+	<option value="1">Andaman and Nicobar Islands</option>
+	<option value="2">Andhra Pradesh</option>
+	<option value="3">Arunachal Pradesh</option>
+	<option value="4">Assam</option>
+	<option value="5">Bihar</option>
+	<option value="6">Chandigarh</option>
+	<option value="7">Chhattisgarh</option>
+	<option value="8">Dadra and Nagar Haveli</option>
+	<option value="9">Daman and Diu</option>
+	<option value="10">Delhi</option>
+	<option value="11">Goa</option>
+	<option value="12">Gujarat</option>
+	<option value="13">Haryana</option>
+	<option value="14">Himachal Pradesh</option>
+	<option value="15">Jammu and Kashmir</option>
+	<option value="16">Jharkhand</option>
+	<option value="17">Karnataka</option>
+	<option value="18">Kerala</option>
+	<option value="19">Lakshadweep</option>
+	<option value="20">Madhya Pradesh</option>
+	<option value="21">Maharashtra</option>
+	<option value="22">Manipur</option>
+	<option value="23">Meghalaya</option>
+	<option value="24">Mizoram</option>
+	<option value="25">Nagaland</option>
+	<option value="26">Odisha</option>
+	<option value="27">Puducherry</option>
+	<option value="28">Punjab</option>
+	<option value="29">Rajasthan</option>
+	<option value="30">Sikkim</option>
+	<option value="31">Tamil Nadu</option>
+	<option value="32">Telangana</option>
+	<option value="33">Tripura</option>
+	<option value="34">Uttar Pradesh</option>
+	<option value="35">Uttarakhand</option>
+	<option value="36">West Bengal</option>
+
+</select>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        City <span style="color: red">*</span></label>
+                                                    
+                                                    <input name="ctl00$ContentPlaceHolder1$txtcity" type="text" id="ctl00_ContentPlaceHolder1_txtcity" class="form-control heightauto" onPaste="javascript: return false;" />
+                                                    <span id="ctl00_ContentPlaceHolder1_rfvname" style="color:Red;display:none;">special characters not allowed</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Pin Code: <span style="color: red">*</span></label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtpincode" type="text" maxlength="6" id="ctl00_ContentPlaceHolder1_txtpincode" class="form-control heightauto" AutoComplete="off" onkeypress="return isNumberKey(event)" onPaste="javascript: return false;" />
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <input id="ctl00_ContentPlaceHolder1_samaddress" type="checkbox" name="ctl00$ContentPlaceHolder1$samaddress" onclick="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$samaddress\&#39;,\&#39;\&#39;)&#39;, 0)" /><label for="ctl00_ContentPlaceHolder1_samaddress"> Is Correspondence Address same as your Permanent Address</label>
+                                            </div>
+
+
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Permanent Address <span style="color: red">*</span></label>
+                                                    <textarea name="ctl00$ContentPlaceHolder1$txtpermanentaddress" rows="2" cols="20" id="ctl00_ContentPlaceHolder1_txtpermanentaddress" class="form-control heightauto" onPaste="javascript: return false;" onkeypress="return alphanumericWithSpaceCommaDot(event,this);">
+</textarea>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        State: <span style="color: red">*</span></label>
+                                                    <select name="ctl00$ContentPlaceHolder1$drppermanentstate" id="ctl00_ContentPlaceHolder1_drppermanentstate" class="form-control form-select heightauto" AutoComplete="off">
+	<option selected="selected" value=""></option>
+	<option value="1">Andaman and Nicobar Islands</option>
+	<option value="2">Andhra Pradesh</option>
+	<option value="3">Arunachal Pradesh</option>
+	<option value="4">Assam</option>
+	<option value="5">Bihar</option>
+	<option value="6">Chandigarh</option>
+	<option value="7">Chhattisgarh</option>
+	<option value="8">Dadra and Nagar Haveli</option>
+	<option value="9">Daman and Diu</option>
+	<option value="10">Delhi</option>
+	<option value="11">Goa</option>
+	<option value="12">Gujarat</option>
+	<option value="13">Haryana</option>
+	<option value="14">Himachal Pradesh</option>
+	<option value="15">Jammu and Kashmir</option>
+	<option value="16">Jharkhand</option>
+	<option value="17">Karnataka</option>
+	<option value="18">Kerala</option>
+	<option value="19">Lakshadweep</option>
+	<option value="20">Madhya Pradesh</option>
+	<option value="21">Maharashtra</option>
+	<option value="22">Manipur</option>
+	<option value="23">Meghalaya</option>
+	<option value="24">Mizoram</option>
+	<option value="25">Nagaland</option>
+	<option value="26">Odisha</option>
+	<option value="27">Puducherry</option>
+	<option value="28">Punjab</option>
+	<option value="29">Rajasthan</option>
+	<option value="30">Sikkim</option>
+	<option value="31">Tamil Nadu</option>
+	<option value="32">Telangana</option>
+	<option value="33">Tripura</option>
+	<option value="34">Uttar Pradesh</option>
+	<option value="35">Uttarakhand</option>
+	<option value="36">West Bengal</option>
+
+</select>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        City <span style="color: red">*</span></label>
+                                                    
+                                                    <input name="ctl00$ContentPlaceHolder1$txtpermanentcity" type="text" id="ctl00_ContentPlaceHolder1_txtpermanentcity" class="form-control heightauto" AutoComplete="off" onPaste="javascript: return false;" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="name">
+                                                        Pin Code: <span style="color: red">*</span></label>
+                                                    <input name="ctl00$ContentPlaceHolder1$txtpermanentpincode" type="text" maxlength="6" id="ctl00_ContentPlaceHolder1_txtpermanentpincode" class="form-control heightauto" AutoComplete="off" onkeypress="return isNumberKey(event)" onPaste="javascript: return false;" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 border-top">
+                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnpreviouspost" value="Previous" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnpreviouspost&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnpreviouspost" class="btn btn-primary pad20px" />
+                                            
+                                            <input type="submit" name="ctl00$ContentPlaceHolder1$btnsavdraft" value="Save" onclick="return ValidateRegForm(); ;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ContentPlaceHolder1$btnsavdraft&quot;, &quot;&quot;, true, &quot;BTN1&quot;, &quot;&quot;, false, false))" id="ctl00_ContentPlaceHolder1_btnsavdraft" class="btn btn-primary pad20px" style="float: right;" />
+
+                                        </div>
+                                        <div class="col-sm-12 col-lg-12 col-md-12">
+                                            <div class="alert-warning pad20px">
+                                                <p style="color: green"><i class="fa fa-exclamation-circle fa-2x"></i>Candidates are requested to use Lastest and Updated browser and check your browser zoom level in case of any issue with Date of Birth Calender </p>
+                                                   <p style="color: green"><i class="fa fa-exclamation-triangle fa-2x"></i>Ensure that DND is not activated on your number in order to receive the OTP. </p>
+                                                 <p style="color: green"><i class="fa fa-exclamation-triangle fa-2x"></i>Sent SMS OTP will be valid for next 5 minutes. </p>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Best View in Google Chrome 44.0, Mozilla Firefox 34.0 or above and MS Edge
+                        </div>
+                        <div class="col-sm-6">
+                            Designed and Developed by IT Division, NBCC (India) Limited.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_regexEmailValid"), document.getElementById("ctl00_ContentPlaceHolder1_RegularExpressionValidator1"), document.getElementById("ctl00_ContentPlaceHolder1_rfvname"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ContentPlaceHolder1_regexEmailValid = document.all ? document.all["ctl00_ContentPlaceHolder1_regexEmailValid"] : document.getElementById("ctl00_ContentPlaceHolder1_regexEmailValid");
+ctl00_ContentPlaceHolder1_regexEmailValid.controltovalidate = "ctl00_ContentPlaceHolder1_txtemail";
+ctl00_ContentPlaceHolder1_regexEmailValid.focusOnError = "t";
+ctl00_ContentPlaceHolder1_regexEmailValid.errormessage = "Invalid Email Address";
+ctl00_ContentPlaceHolder1_regexEmailValid.validationGroup = "BTN1";
+ctl00_ContentPlaceHolder1_regexEmailValid.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_regexEmailValid.validationexpression = "\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+var ctl00_ContentPlaceHolder1_RegularExpressionValidator1 = document.all ? document.all["ctl00_ContentPlaceHolder1_RegularExpressionValidator1"] : document.getElementById("ctl00_ContentPlaceHolder1_RegularExpressionValidator1");
+ctl00_ContentPlaceHolder1_RegularExpressionValidator1.controltovalidate = "ctl00_ContentPlaceHolder1_txtmobile";
+ctl00_ContentPlaceHolder1_RegularExpressionValidator1.errormessage = "Only numbers (10 digits)";
+ctl00_ContentPlaceHolder1_RegularExpressionValidator1.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_RegularExpressionValidator1.validationexpression = "[0-9]{10}";
+var ctl00_ContentPlaceHolder1_rfvname = document.all ? document.all["ctl00_ContentPlaceHolder1_rfvname"] : document.getElementById("ctl00_ContentPlaceHolder1_rfvname");
+ctl00_ContentPlaceHolder1_rfvname.controltovalidate = "ctl00_ContentPlaceHolder1_txtcity";
+ctl00_ContentPlaceHolder1_rfvname.focusOnError = "t";
+ctl00_ContentPlaceHolder1_rfvname.errormessage = "special characters not allowed";
+ctl00_ContentPlaceHolder1_rfvname.display = "Dynamic";
+ctl00_ContentPlaceHolder1_rfvname.evaluationfunction = "RegularExpressionValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_rfvname.validationexpression = "^[\\sa-zA-Z0-9]*$";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        
+theForm.oldSubmit = theForm.submit;
+theForm.submit = WebForm_SaveScrollPositionSubmit;
+
+theForm.oldOnSubmit = theForm.onsubmit;
+theForm.onsubmit = WebForm_SaveScrollPositionOnSubmit;
+
+theForm.oldOnLoad = window.onload;
+window.onload = WebForm_RestoreScrollPosition;
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.CalendarBehavior, {"button":$get("ctl00_ContentPlaceHolder1_txtDate"),"format":"dd-MMM-yyyy","id":"ctl00_ContentPlaceHolder1_CalendarExtender2"}, null, null, $get("ctl00_ContentPlaceHolder1_txtDate"));
+});
+//]]>
+</script>
+</form>
+</body>
+</html>

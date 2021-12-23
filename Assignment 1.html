@@ -1,0 +1,90 @@
+<html>
+<head>
+    <style>
+		body {
+			padding-left: 20%;
+			padding-right: 20%;
+			font-family: lightblue;
+			font-size: 20px;
+}
+.formContainer {
+	 display: flex; 
+	 border: 1px solid #555555;
+	 padding: 30px; 
+	 flex-direction: column;
+	 }
+	 .formContainer p{
+	 	color: red;
+	 }
+	 .formFields{
+	 	display: flex;
+	 	/*border: 1px dashed black; */
+	 	padding: 10px;
+	 	align-items: center;
+	 	/*padding-right: 30%;*/
+	 }
+	 .inputBoxes {
+	 	/*margin-left: 20px; */ 
+	 	padding: 15px;
+	 	flex: 5;
+	    /*border: 1px dashed black;*/
+	 }
+	 .formLabels{
+	 	flex: 3;
+	 	/* border: 1px dashed black;*/
+	 }
+	 .moveToRight{
+           justify-content: flex-end;
+	 }
+	 .niceButton{
+	 	color: White;
+	 	background:#4d4d4d;
+	 	 
+	 }
+	 #buttonC{
+	 	padding: 7px 27px;
+	 }
+       
+	</style>
+</head>
+<body>   
+    <div style="display: none;">    	
+    </div>
+    <div class="outerBox">
+    </div>
+    <div class="formContainer">
+    <p>Registration form</p>
+    <p>this is a sample form</p>	
+    <form>
+    	<div class="formFields">
+    		<div style="flex:2">
+                </div>
+    		<label class="formLabels">
+    		 First Name :
+    		</label>
+    		<input type="text" placeholder="First Name" class="inputBoxes" >
+    	</div>
+    	    <div class="formFields">
+    	    	<div style="flex:2">
+                </div>
+    		<label class="formLabels">
+    		Last Name :
+    	    </label>
+    		<input type="text" placeholder="Last Name" class="inputBoxes" >
+    	</div>
+    	<div class="formFields">
+    		<div style="flex:2">
+                </div>
+    		<label class="formLabels">
+    		 E-mail :
+    		</label>
+    		<input type="text" placeholder="Email" class="inputBoxes" >
+    	</div>
+    	<div class="formFields moveToRight">
+    		<input type="submit" value="Register" class="niceButton" id="buttonC">
+    	</div>
+    </form>
+</div>
+</body>
+
+</html>

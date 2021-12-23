@@ -1,0 +1,180 @@
+      <!DOCTYPE html>                                                
+<html>
+<head>
+	<title>display</title>
+	<!--style >
+		h1.hidden{
+    visibility: hidden;            #hidden
+    display: none;                  #none 
+    display: block;                #block 
+    display:inline;                 #inline
+		}
+</style>
+<style >
+	#panel,flip
+	{
+font-size: 16px;                          # show hidden- content
+padding: 10px;
+text-align: center;
+color: white;
+background-color: red;
+border: solid 1px black;
+margin: auto;
+	}
+	#panel{
+		display: none
+	}
+</style>
+<style >
+	div.fixed{
+		/*position: fixed;*/                                       /* #fixed position*/
+		position: relative;                                       /* #relative position*/
+		bottom: 0;
+		right: 0;
+		height: 200px;
+		width: 300px;
+		border: 3px solid green;
+	}
+	div.absolute {                                              /*absolute value */
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 200px;
+  height: 100px;
+  border: 3px solid #73AD21;
+}
+</style>
+<style >
+	div.sticky{
+		position: -webkit-sticky;                     /*sticky position */
+  position: sticky;
+  top: 0;
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4CAF50;
+	}
+</style>
+<style>
+	img {                                         /* overlapping position */
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		z-index: -2;
+	}
+</style>
+<style >
+	img{
+		position: absolute;                       /* shape of element */      
+		/*clip: rect(0px,60px,200px,0px); */
+		top: 0px;                                   /*top- edge of elment */
+	}
+</style>
+<style >
+	img.ex1 {
+  position: absolute;                            /* bottom -edge */
+  bottom: 0px;
+}
+
+img.ex2 {
+  position: relative;
+  bottom: -100px;
+}
+	
+</style>
+<style >
+	img {
+		position: absolute;               /*left edge */ 
+		/*left: 50px; */
+		right: 50px;
+	}
+</style>
+<style>
+	.container {
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  top: 50%;
+ /* bottom: 8px;
+ right: 16px;
+  /*left: 16px;*/
+ width: 100%;
+ text-align: center;
+   font-size: 18px;
+}
+
+img { 
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+</style-->
+<style>                                            /* visible overflow */
+	div {
+  background-color: green;
+  width: 200px;
+  height: 100px;
+  border: 1px dotted black;
+ /* overflow: visible; 
+  overflow: hidden; 
+  overflow: scroll;
+  overflow: auto;*/
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+</style>
+</head>
+<body>
+	<h2>CSS Overflow</h2>
+<p>By default, the overflow is visible, meaning that it is not clipped and it renders outside the element's box:</p>
+
+<div>You can use the overflow property when you want to have better control of the layout. The overflow property specifies what happens if content overflows an element's box.</div>
+	<!--p>Add some text to an image in the top left corner:</p>
+
+<div class="container">
+  <img src="5.jpg" alt="Cinque Terre" width="1000" height="100">
+ <div class="topleft">Top center</div>
+</div>
+	<h1>This is a heading</h1>
+	<img class="ex1" src="5.jpg" width="42" height="72">
+<img class="ex2" src="3.jpg" width="42" height="42">
+	<h1>This is a heading</h1>
+<img src="5.jpg" width="100" height="140">
+<p>Because the image has a z-index of -1, it will be placed behind the text.</p>
+
+	<p>Try to <b>scroll</b> inside this frame to understand how sticky positioning works.</p>
+<p>Note: IE/Edge 15 and earlier versions do not support sticky position.</p>
+
+<div class="sticky">I am sticky!</div>
+
+<div style="padding-bottom:2000px">
+  <p>In this example, the sticky element sticks to the top of the page (top: 0), when you reach its scroll position.</p>
+  <p>Scroll back up to remove the stickyness.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</div> 
+	<h2>position: fixed;</h2>
+<p>An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled:</p>
+<div class="fixed">
+	<div class="absolute"></div>
+This div element has position: fixed;
+</div>
+<span>This is a visible heading</span>
+<h1 class="hidden">This is a hidden heading</h1>
+<p >Notice that the hidden heading still takes up space.</p-->
+	<!--p class="flip" onclick="myfunction()">click to show panel</p>
+	<div id="panel">
+		p>This panel contains a div element, which is hidden by default (display: none).</p>
+  <p>It is styled with CSS and we use JavaScript to show it (display: block).</p>
+  <p>How it works: Notice that the p element with class="flip" has an onclick attribute attached to it. When the user clicks on the p element, a function called myFunction() is executed, which changes the style of the div with id="panel" from display:none (hidden) to display:block (visible).</p>
+  <p>You will learn more about JavaScript in our JavaScript Tutorial.</p>
+</div>
+<script >
+	function myFunction() {
+  document.getElementById("panel").style.display = "block";
+}
+</script>
+	</div-->
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>floating</title>
+	<!--style>
+		/*img{
+
+		  /* float: right;                /* simple float     DINESH ID=CSCPHULWARI@GMAIL.COM*/
+		  /* border: 5px solid red;        /*image with border margin  float right side  paragraph */
+           /*margin: 0px 0px 15px 20px;
+           padding: 15px;
+           width: 1200px;
+           text-align: center;*/
+          /* span {
+           float: left;         /* left latter float */
+          /* width: 0.7em;
+           font-size: 400%;
+           font-family: algerian, courier;
+           line-height: 80%;*/
+       /*    .div1 {
+         float: left;
+         width: 100px;
+         height: 50px;
+         margin: 10px;
+         border: 3px solid #73AD21;
+}
+
+  .div2 {
+         border: 1px solid red;
+}
+ // tourning off float (using clear property)//
+
+  .div3 {
+       float: left;
+       width: 100px;
+       height: 50px;
+       margin: 10px;
+       border: 3px solid #73AD21;
+}
+
+.div4 {
+       border: 1px solid red;
+        clear: left;*/
+       /* div {
+  border: 3px solid #4CAF50;
+  padding: 5px;
+}
+
+.img1 {
+  float: right;
+}
+//turning off float ( clear fix )
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.img2 {
+  float: right;*/
+}
+	</style>
+	<style>
+* {
+  box-sizing: border-box;         /floating create box
+}
+     //floating create box //
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<style >
+	*{
+		box-sizing: border-box;     /* create side by side imaage */
+ 	}
+	.img-container {
+		float: left;
+		width: 33.33%;
+		padding: 5px;
+	}
+	.clearfix:after {
+      content: " none";
+      clear: both;
+      display: table;
+	}
+</style>
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  background-color: DodgerBlue;
+}
+
+.flex-container .box {
+  background-color: #f1f1f1;              /* equal height box with flexbox */
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+</style>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;                     /* horizantal menu box*/
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: red;
+}
+</style-->
+<style>                                      /* create a web layout */
+* {
+  box-sizing: border-box;
+}
+
+.header, .footer {
+  background-color: grey;
+  color: white;
+  padding: 15px;
+}
+
+.column {
+  float: left;
+  padding: 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.menu {
+  width: 25%;
+}
+
+.content {
+  width: 75%;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>Chania</h1>
+</div>
+
+<div class="clearfix">
+  <div class="column menu">
+    <ul>
+      <li>The Flight</li>
+      <li>The City</li>
+      <li>The Island</li>
+      <li>The Food</li>
+    </ul>
+  </div>
+
+  <div class="column content">
+    <h1>The City</h1>
+    <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+    <p>You will learn more about web layout and responsive web pages in a later chapter.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Footer Text</p>
+</div>
+	<!--ul>
+  <li><a href="#home" class="active">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+	<div class="flex-container">
+  <div class="box">Box 1 - This is some text to make sure that the content gets really tall. This is some text to make sure that the content gets really tall.</div>
+  <div class="box">Box 2 - My height will follow Box 1.</div>
+</div>
+
+<p>Try to resize the browser window to see the flexible layout.</p>
+<p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 or earlier versions.</p>
+
+	<h2>Images Side by Side</h2>
+<p>Float images side by side:</p>
+
+<div class="clearfix">
+  <div class="img-container">
+  <img src="1.jpg" alt="Italy" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="3.jpg" alt="Forest" style="width:100%">
+  </div>
+  <div class="img-container">
+  <img src="5.jpg" alt="Mountains" style="width:100%">
+  </div>
+</div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that we add the box-sizing property to make sure that the image container doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+
+	<div class="clearfix">
+  <div class="box" style="background-color:#bbb">
+  <p>Some text inside the box.</p>
+  </div>
+  <div class="box" style="background-color:#ccc">
+  <p><img src="3.jpg" height="150" width="240"></p>
+  </div>
+  <div class="box" style="background-color:#ddd">
+  <p>Some text inside the box.</p>
+  </div>
+</div>
+
+<p>Note that we also use the clearfix hack to take care of the layout flow, and that add the box-sizing property to make sure that the box doesn't break due to extra padding. Try to remove this code to see the effect.</p>
+	<p>In this example, the image is taller than the element containing it, and it is floated, so it overflows outside of its container:</p>
+
+<div>
+  <h2>Without Clearfix</h2>
+  <img class="img1" src="3.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+
+<p style="clear:right">Add the clearfix hack to the containing element, to fix this problem:</p>
+
+<div class="clearfix">
+  <h2>With Clearfix</h2>
+  <img class="img2" src="3.jpg" alt="Pineapple" width="170" height="170">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...
+</div>
+
+	<h2>Without clear</h2>
+<div class="div1">div1</div>
+<div class="div2">div2 - Notice that the div2 element is after div1, in the HTML code. However, since div1 is floated to the left, this happens: the text in div2 is floated around div1, and div2 surrounds the whole thing.</div>
+
+<h2>Using clear</h2>
+<div class="div3">div3</div>
+<div class="div4">div4 - Using clear moves div4 down below the floated div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+   <span>T</span>his is the paragraph below, we have added an image with style <b>float:right</b>.
+	 The result is that the image will float to the right in the paragraph.</p>
+<p><img src="3.jpg" width="1200" height="500">
+This is some text. This is some text. This is some text.<br>
+This is some text. This is some text. This is some text.<br>
+This is some text. This is some text. This is some text.<br>
+This is some text. This is some text. This is some text.<br>
+This is some text. This is some text. This is some text.<br>
+This is some text. This is some text. This is some text.<br>
+This is some text. This is some text. This is some text.<br>
+This is some text. This is some text. This is some text.<br>
+This is some text. This is some text. This is some text.<br-->
+</body>
+</html>
